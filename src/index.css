@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white;
+  @apply bg-gradient-to-tl from-[#0f0f0f] via-[#1c1c1c] to-[#2b2b2b];
 }

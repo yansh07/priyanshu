@@ -1,16 +1,33 @@
-import React from 'react';
+import React from "react";
 
 export const Navbar = () => {
   return (
-    <nav className="max-w-4xl px-6 py-3 mx-auto my-6 transition-all duration-200 border rounded-full bg-white/5 hover:ease-in-out hover:scale-95 border-white/20 backdrop-blur-lg">
-      <ul className="flex justify-center gap-6 font-medium text-white">
-        <li className="transition duration-200 hover:text-pink-400">Home</li>
-        <li className="transition duration-200 hover:text-pink-400">Projects</li>
-        <li className="transition duration-200 hover:text-pink-400">Resume</li>
-        <li className="transition duration-200 hover:text-pink-400">Links</li>
-        <li className="transition duration-200 hover:text-pink-400">Contact</li>
-      </ul>
-    </nav>
+    <header class="fixed z-50 w-full px-2 transform -translate-x-1/2 top-4 left-1/2 sm:px-6">
+      <nav class="max-w-2xl mx-auto  border rounded-full bg-transparent  border-slate-700 backdrop-blur-lg">
+        <ul class="flex flex-wrap items-center justify-center gap-4 py-4 text-sm font-normal sm:gap-6 md:gap-8 sm:text-base md:text-lg text-slate-200">
+          <li className='class="transition hover:text-white hover:underline underline-offset-4"'>
+            Home
+          </li>
+          <li className="transition hover:text-white hover:underline underline-offset-4">
+            Projects
+          </li>
+          <li className="transition hover:text-white hover:underline underline-offset-4">
+            Resume
+          </li>
+          <li className="transition hover:text-white hover:underline underline-offset-4">
+            Links
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="transition hover:text-white hover:underline underline-offset-4"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
