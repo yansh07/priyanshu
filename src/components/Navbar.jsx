@@ -1,11 +1,9 @@
-import React from "react";
-
 export const Navbar = () => {
   return (
-    <header class="fixed z-50 w-full px-2 transform -translate-x-1/2 top-4 left-1/2 sm:px-6">
-      <nav class="max-w-2xl mx-auto  border rounded-full bg-transparent  border-slate-700 backdrop-blur-lg">
-        <ul class="flex flex-wrap items-center justify-center gap-4 py-4 text-sm font-normal sm:gap-6 md:gap-8 sm:text-base md:text-lg text-slate-200">
-          <li className='class="transition hover:text-white hover:underline underline-offset-4"'>
+    <header>
+      <nav className="p-3 fixed flex left-0 right-0 z-[100] bg-transparent border border-t border-[#ffffff10] text-white/70 backdrop-blur-xl transition-all md:top-0 md:bottom-auto bottom-0 md:w-[45rem] rounded-t-2xl md:rounded-full md:mt-6 md:justify-self-center">
+        <ul class="flex w-full justify-between md:space-x-6 md:justify-center md:gap-12 gap-6">
+          <li className="transition hover:text-white hover:underline underline-offset-4">
             Home
           </li>
           <li className="transition hover:text-white hover:underline underline-offset-4">
@@ -20,7 +18,7 @@ export const Navbar = () => {
           <li>
             <a
               href="#contact"
-              class="transition hover:text-white hover:underline underline-offset-4"
+              className="transition hover:text-white hover:underline underline-offset-4"
             >
               Contact
             </a>

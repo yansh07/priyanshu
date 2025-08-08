@@ -1,10 +1,13 @@
-import React from 'react';
-
+// import { body } from 'framer-motion/client';
+// import ThemeToggle from "../components/Darkmode";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 function Home() {
   return (
-    <section className="flex items-center justify-center min-h-screen text-4xl text-white">
-      Welcome to PK's Portfolio 👑
-    </section>
+    <div className="min-h-screen bg-gradient-to-tl from-[#0f0f0f] via-[#1c1c1c] to-[#2b2b2b]">
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
 
