@@ -1,10 +1,10 @@
 // import { body } from 'framer-motion/client';
-// import ThemeToggle from "../components/Darkmode";
+import ThemeToggle from "../components/Darkmode";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 function Home() {
   return (
-    <div className="min-h-screen bg-[#1e1a1a]">
+    <div className="min-h-screen bg-[#121212]">
       <Navbar />
       <Hero />
     </div>

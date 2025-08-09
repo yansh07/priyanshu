@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
-    <header className="px-12 py-12 text-left md:py-32 md:ml-20 md:px-24">
-      <p className="mb-4 text-white/80 font-soft text-md md:text-lg">
+    <header className="px-12 py-12 text-left md:py-36 md:ml-20 md:px-24">
+      <p className="mb-4 text-white/80 font-soft text-md md:text-xl md:mb-6">
         Hi, I am Priyanshu
       </p>
 
@@ -13,6 +13,29 @@ export const Hero = () => {
           Just another BCA 2nd Year kid, Turning coffee into code, chaos into
           clarity. Building stuff with MERN & Python.
         </p>
+      </div>
+      <div class="flex gap-3 py-6 mt-auto">
+        <a
+          href="https://github.com/yansh07"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          aria-label="GitHub"
+        >
+          <i class="text-3xl text-white/80 hover:text-white fa-brands fa-square-github sm:text-4xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/yansh08/"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          aria-label="LinkedIn"
+        >
+          <i class="text-3xl hover:text-white text-white/80 fab fa-linkedin sm:text-4xl"></i>
+        </a>
+        <a
+          href="mailto:pksingh69313@gmail.com"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          aria-label="Email"
+        >
+          <i class="text-3xl hover:text-white text-white/80 fa fa-envelope sm:text-4xl"></i>
+        </a>
       </div>
     </header>
   );
