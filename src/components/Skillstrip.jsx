@@ -53,7 +53,7 @@ const MarqueeIcons = ({ techs }) => {
 
 export const Skillstrip = () => {
   return (
-    <div className="px-10 mb-14 md:px-24 md:ml-20 md:-mt-16 lg:flex lg:flex-row lg:gap-8">
+    <div className="px-10 mb-14 md:px-24 md:ml-20 md:-mt-16 lg:flex lg:flex-row lg:space-x-12">
       {/* First Column: "What I do?" section */}
       <div className="flex-1 w-full lg:w-1/2">
         <h2 className="mb-6 text-4xl font-bold text-white">What I do?</h2>
@@ -80,8 +80,8 @@ export const Skillstrip = () => {
         </div>
       </div>
       {/* Second Column: "Tech Stack" section */}
-      <div className="w-full mt-10 lg:mt-0 lg:w-1/2">
-        <div className="relative text-white bg-transparent h-[280px] lg:w-[450px] xl:w-[550px]">
+      <div className="w-full mt-10 lg:mt-0 lg:w-1/2 ">
+        <div className="relative text-white bg-transparent h-[285px] lg:w-[400px] xl:w-[550px]">
           <LetterGlitch
             glitchSpeed={50}
             centerVignette={false}
