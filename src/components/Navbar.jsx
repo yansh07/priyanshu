@@ -9,8 +9,13 @@ export const Navbar = () => {
           <li className="transition hover:text-white hover:underline underline-offset-4">
             Projects
           </li>
-          <li className="transition hover:text-white hover:underline underline-offset-4">
-            Resume
+          <li>
+            <a
+              href="/resume.pdf"
+              className="transition hover:text-white hover:underline underline-offset-4"
+            >
+              Resume
+            </a>
           </li>
           <li className="transition hover:text-white hover:underline underline-offset-4">
             Links

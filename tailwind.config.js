@@ -1,5 +1,3 @@
-import { BiFontFamily } from "react-icons/bi";
-
 // tailwind.config.js
 export default {
   darkMode: 'class',
