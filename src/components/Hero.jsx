@@ -22,21 +22,21 @@ export const Hero = () => {
       <div class="flex gap-3 py-6 mt-auto">
         <a
           href="https://github.com/yansh07"
-          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#1a1a1a] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="GitHub"
         >
-          <i class="text-3xl text-white/80 hover:text-white fa-brands fa-square-github sm:text-4xl"></i>
+          <i class="text-3xl text-white/80 hover:text-white fa-brands fa-github sm:text-4xl"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/yansh08/"
-          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#1a1a1a] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="LinkedIn"
         >
           <i class="text-3xl hover:text-white text-white/80 fab fa-linkedin sm:text-4xl"></i>
         </a>
         <a
           href="mailto:pksingh69313@gmail.com"
-          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#121212] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          class="backdrop-xl relative z-10 p-2 transition duration-200 bg-[#1a1a1a] border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="Email"
         >
           <i class="text-3xl hover:text-white text-white/80 fa fa-envelope sm:text-4xl"></i>
