@@ -1,3 +1,4 @@
+
 export const Hero = () => {
   return (
     <header className="px-12 py-12 text-left md:py-28 md:ml-20 md:px-24">
@@ -14,7 +15,8 @@ export const Hero = () => {
         <h1 className="text-5xl font-bold leading-none text-white font-soft md:text-6xl text-pretty">
           Full-Stack Developer
         </h1>
-        <p className="text-xl hover:text-white text-white/80 font-soft md:text-2xl max-w-prose">
+
+        <p className="text-xl hover:text-white text-white/80 font-soft md:text-2xl">
           Just another BCA 2nd Year kid, Turning coffee into code, chaos into
           clarity. Building stuff with MERN & Python.
         </p>
@@ -39,13 +41,18 @@ export const Hero = () => {
           class="backdrop-xl relative z-10 p-2 md:p-3 transition duration-200 bg-gray-800/50 border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="Twitter"
         >
-          <i className="text-4xl md:text-4xl hover:text-white text-white/80 fa-brands fa-twitter" aria-hidden='true'></i>
+          <i
+            className="text-4xl md:text-4xl hover:text-white text-white/80 fa-brands fa-twitter"
+            aria-hidden="true"
+          ></i>
         </a>
         <a
           href="/resume.pdf"
           class="text-white/70 hover:text-white items-center p-3 text-lg font-soft font-medium md:p-3 md:text-2xl backdrop-xl relative z-10 transition duration-200 bg-gray-800/50 border rounded-lg hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="Resume"
-        >Resume</a>
+        >
+          Resume
+        </a>
       </div>
     </header>
   );
