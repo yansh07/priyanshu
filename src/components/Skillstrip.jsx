@@ -63,7 +63,7 @@ const Skillstrip = () => {
 
   return (
     <div className="min-h-screen px-10 py-2 ">
-      <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-24 lg:px-32">
+      <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 lg:px-32">
         {/* Header */}
         <div className="mb-10">
           <h2 className="mb-4 text-4xl font-bold text-white">My Projects</h2>
