@@ -1,122 +1,207 @@
-import { useState } from "react";
-import LetterGlitch from "./Glitch";
+import React from 'react';
+import { ExternalLink, Github } from 'lucide-react';
 
-const AccordionItem = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Skillstrip = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Portfolio Website",
+      image: "/portfolio.webp",
+      techStack: [
+        { name: "React", icon: "devicon-react-original coloured" },
+        { name: "CSS", icon: "devicon-css3-plain" },
+        { name: "NodeJS", icon: "devicon-nodejs-plain" },
+        { name: "Tailwind", icon: "devicon-tailwindcss-plain" }
+      ],
+      description: "My portfolio website made with React, styled with Tailwind and deployed on Vercel. Add custom CSS, animation and google fonts.",
+      liveLink: "https://priyanshu8.vercel.app/",
+      githubLink: "https://github.com/yansh07/priyanshu"
+    },
+    {
+      id: 2,
+      title: "AI Assistant",
+      image: "/ai.webp",
+      techStack: [
+        { name: "GitHub", icon: "devicon-github-original" },
+        { name: "Python", icon: "devicon-python-plain" },
+        { name: "Playwright", icon: "devicon-playwright-plain" },
+        { name: "Bash", icon: "devicon-bash-plain coloured" }
+      ],
+      description: "A CLI based AI Assistant app, used OpenAI API, OpenAI Whisper model, Microsoft Edge TTS, Porcupine and Playwright for automation.",
+      liveLink: "https://github.com/yansh07/AiAssistant",
+      githubLink: "https://github.com/yansh07/AiAssistant"
+    },
+    {
+      id: 3,
+      title: "Spends Tracker App",
+      image: "/spend.webp",
+      techStack: [
+        { name: "Python", icon: "devicon-python-plain coloured" },
+        { name: "Tailwind", icon: "devicon-tailwindcss-original" },
+        { name: "Streamlit", icon: "devicon-streamlit-plain coloured" },
+        { name: "Pandas", icon: "devicon-pandas-plain" }
+      ],
+      description: "Created a minimalist spending tracker app integrated with Google Sheets. Implemented Gmail automation for monthly spending reports. Developed a secure and mobile-friendly user interface.",
+      liveLink: "https://pocketflow.streamlit.app/",
+      githubLink: "https://github.com/yansh07/spend-Tracker"
+    },
+    {
+      id: 4,
+      title: "ToDo App",
+      image: "/todo.webp",
+      techStack: [
+        { name: "Python", icon: "devicon-python-plain coloured" },
+        { name: "Tailwind", icon: "devicon-tailwindcss-original" },
+        { name: "Streamlit", icon: "devicon-streamlit-plain coloured" },
+        { name: "MongoDB", icon: "devicon-mongodb-plain" }
+      ],
+      description: "Developed a full-stack ToDo web application using Flask and PostgreSQL with complete user authentication (login/register). Integrated Supabase as a remote PostgreSQL backend, handling all CRUD operations for ToDos.",
+      liveLink: "https://flask-todo-app-7cqt.onrender.com/login",
+      githubLink: "https://github.com/yansh07/todo"
+    }
+  ];
 
   return (
-    <div className="px-4 py-4 bg-transparent border backdrop-blur-lg border-white/5 rounded-xl">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full text-lg text-left font-base text-slate-200"
-      >
-        <span className="truncate">{title}</span>
-        <svg
-          className={`w-5 h-7 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          ></path>
-        </svg>
-      </button>
-      {isOpen && (
-        <div className="mt-3 space-y-2 text-sm text-gray-400 animate-fadeIn">
-          {children}
+    <div className="min-h-screen px-10 py-2 ">
+      <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-24 lg:px-32">
+        {/* Header */}
+        <div className="mb-10">
+          <h2 className="mb-4 text-4xl font-bold text-white">My Projects</h2>
+          {/* <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div> */}
         </div>
-      )}
-    </div>
-  );
-};
 
-const MarqueeIcons = ({ techs }) => {
-  return (
-    <div className="relative w-full overflow-hidden">
-      <div className="flex gap-6 animate-marquee">
-        {techs.concat(techs).map((tech, idx) => (
-          <div key={idx} className="flex items-center flex-shrink-0 gap-2">
-            <img src={tech.icon} alt={tech.name} className="w-6 h-6" />
-            <span className="text-lg text-white">{tech.name}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+        {/* Projects Grid */}
+        <div className="space-y-20">
+          {projects.map((project, index) => {
+            const isEven = index % 2 === 1;
+            
+            return (
+              <div key={project.id} className="group">
+                {/* Large Screens Layout */}
+                <div className={`hidden lg:flex items-center gap-4 ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
+                  {/* Project Image */}
+                  <div className="relative flex-1 overflow-hidden transition-all duration-500 shadow-2xl rounded-2xl group-hover:shadow-purple-500/25">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="object-cover w-full transition-transform duration-500 h-80 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-black/50 to-transparent group-hover:opacity-100"></div>
+                  </div>
 
-export const Skillstrip = () => {
-  return (
-    <div className="px-10 mb-14 md:px-24 md:ml-20 md:-mt-16 lg:flex lg:flex-row lg:space-x-12">
-      {/* First Column: "What I do?" section */}
-      <div className="flex-1 w-full lg:w-1/2">
-        <h2 className="mb-6 text-4xl font-bold text-white">What I do?</h2>
-        <div className="w-full space-y-4">
-          <div className="bg-[#1a1a1a]">
-            <AccordionItem title="⚛️ Frontend Development">
-              <p>• Developed websites and web apps.</p>
-              <p>• Mobile-friendly and responsive websites.</p>
-              <p>• React JS websites.</p>
-            </AccordionItem>
-          </div>
-          <div className="bg-[#1a1a1a]">
-            <AccordionItem title="⚙️ Backend Development">
-              <p>• Designed backend with Flask.</p>
-              <p>• Worked with APIs.</p>
-            </AccordionItem>
-          </div>
-          <div className="bg-[#1a1a1a]">
-            <AccordionItem title="👨🏻‍💻 Other skills">
-              <p>• AI & Automation.</p>
-              <p>• Worked with OpenAI models.</p>
-            </AccordionItem>
-          </div>
+                  {/* Project Details */}
+                  <div className="flex-1 space-y-6">
+                    <h3 className="text-3xl font-bold text-white transition-colors duration-300 group-hover:text-purple-300">
+                      {project.title}
+                    </h3>
+                    
+                    {/* Tech Stack */}
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-gray-300">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-4">
+                        {project.techStack.map((tech, i) => (
+                          <div key={i} className="flex items-center gap-2 px-3 py-2 transition-colors duration-300 border rounded-lg bg-gray-800/50 border-gray-700/50 hover:border-purple-500/50">
+                            <i className={`${tech.icon} text-xl`}></i>
+                            <span className="text-sm text-gray-300">{tech.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="leading-relaxed text-gray-300">
+                      {project.description}
+                    </p>
+
+                    {/* Links */}
+                    <div className="flex gap-4">
+                      <a 
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-purple-500/25"
+                      >
+                        <ExternalLink size={18} />
+                        Live Demo
+                      </a>
+                      <a 
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform bg-gray-800 border border-gray-700 rounded-lg shadow-lg hover:bg-gray-700 hover:border-gray-600 hover:scale-105"
+                      >
+                        <Github size={18} />
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Small/Medium Screens Layout */}
+                <div className="overflow-hidden transition-all duration-300 border lg:hidden bg-gray-800/30 backdrop-blur-sm rounded-2xl border-gray-700/50 hover:border-purple-500/50">
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="object-cover w-full h-64 sm:h-80"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  </div>
+
+                  {/* Project Details */}
+                  <div className="p-6 space-y-6">
+                    <h3 className="text-2xl font-bold text-white">
+                      {project.title}
+                    </h3>
+                    
+                    {/* Tech Stack */}
+                    <div className="space-y-3">
+                      <h4 className="text-lg font-semibold text-gray-300">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-3">
+                        {project.techStack.map((tech, i) => (
+                          <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-700/50">
+                            <i className={`${tech.icon} text-lg`}></i>
+                            <span className="text-sm text-gray-300">{tech.name}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="leading-relaxed text-gray-300">
+                      {project.description}
+                    </p>
+
+                    {/* Links */}
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <a 
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                      >
+                        <ExternalLink size={18} />
+                        Live Demo
+                      </a>
+                      <a 
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 bg-gray-700 border border-gray-600 rounded-lg shadow-lg hover:bg-gray-600"
+                      >
+                        <Github size={18} />
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-      {/* Second Column: "Tech Stack" section */}
-      <div className="w-full mt-10 lg:mt-0 lg:w-1/2 ">
-        <div className="relative text-white bg-transparent h-[285px] lg:w-[400px] xl:w-[550px]">
-          <LetterGlitch
-            glitchSpeed={50}
-            centerVignette={false}
-            outerVignette={false}
-            smooth={true}
-          />
-        </div>
-      </div>
-      );
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-        @keyframes marquee {
-          0% {
-            transform: translateX(20%);
-          }
-          100% {
-            transform: translateX(-200%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 8s linear infinite;
-        }
-      `}</style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </div>
   );
 };
