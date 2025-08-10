@@ -67,7 +67,6 @@ const Skillstrip = () => {
         {/* Header */}
         <div className="mb-10">
           <h2 className="mb-4 text-4xl font-bold text-white">My Projects</h2>
-          {/* <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div> */}
         </div>
 
         {/* Projects Grid */}
@@ -207,3 +206,4 @@ const Skillstrip = () => {
 };
 
 export default Skillstrip;
+
