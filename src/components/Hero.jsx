@@ -37,7 +37,7 @@ export const Hero = () => {
           <i className="text-4xl md:text-4xl hover:text-white text-white/80 fab fa-linkedin"></i>
         </a>
         <a
-          href="mailto:pksingh69313@gmail.com"
+          href="https://x.com/yansh_08"
           className="relative z-10 p-2 transition duration-200 border rounded-lg backdrop-xl md:p-3 bg-gray-800/50 hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
           aria-label="Twitter"
         >
