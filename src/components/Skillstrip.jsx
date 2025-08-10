@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { Link } from 'react-router-dom'; // If you're using react-router
 
 const Skillstrip = () => {
   const projects = [
@@ -69,16 +70,14 @@ const Skillstrip = () => {
           <h2 className="mb-4 text-4xl font-bold text-white">My Projects</h2>
         </div>
 
-        {/* Projects Grid */}
+        {/* Show ONLY first 2 projects */}
         <div className="space-y-20">
-          {projects.map((project, index) => {
+          {projects.slice(0, 2).map((project, index) => {
             const isEven = index % 2 === 1;
-            
             return (
               <div key={project.id} className="group">
                 {/* Large Screens Layout */}
                 <div className={`hidden lg:flex items-center gap-4 ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
-                  {/* Project Image */}
                   <div className="relative flex-1 overflow-hidden transition-all duration-500 shadow-2xl rounded-2xl group-hover:shadow-purple-500/25">
                     <img 
                       src={project.image} 
@@ -87,14 +86,10 @@ const Skillstrip = () => {
                     />
                     <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-black/50 to-transparent group-hover:opacity-100"></div>
                   </div>
-
-                  {/* Project Details */}
                   <div className="flex-1 space-y-6">
                     <h3 className="text-3xl font-bold text-white transition-colors duration-300 group-hover:text-purple-300">
                       {project.title}
                     </h3>
-                    
-                    {/* Tech Stack */}
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-gray-300">Tech Stack</h4>
                       <div className="flex flex-wrap gap-4">
@@ -106,31 +101,15 @@ const Skillstrip = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Description */}
                     <p className="leading-relaxed text-gray-300">
                       {project.description}
                     </p>
-
-                    {/* Links */}
                     <div className="flex gap-4">
-                      <a 
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-purple-500/25"
-                      >
-                        <ExternalLink size={18} />
-                        Live Demo
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-purple-500/25">
+                        <ExternalLink size={18} /> Live Demo
                       </a>
-                      <a 
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform bg-gray-800 border border-gray-700 rounded-lg shadow-lg hover:bg-gray-700 hover:border-gray-600 hover:scale-105"
-                      >
-                        <Github size={18} />
-                        GitHub
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 text-white transition-all duration-300 transform bg-gray-800 border border-gray-700 rounded-lg shadow-lg hover:bg-gray-700 hover:border-gray-600 hover:scale-105">
+                        <Github size={18} /> GitHub
                       </a>
                     </div>
                   </div>
@@ -138,23 +117,12 @@ const Skillstrip = () => {
 
                 {/* Small/Medium Screens Layout */}
                 <div className="overflow-hidden transition-all duration-300 border lg:hidden bg-gray-800/30 backdrop-blur-sm rounded-2xl border-gray-700/50 hover:border-purple-500/50">
-                  {/* Project Image */}
                   <div className="relative overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="object-cover w-full h-64 sm:h-80"
-                    />
+                    <img src={project.image} alt={project.title} className="object-cover w-full h-64 sm:h-80" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   </div>
-
-                  {/* Project Details */}
                   <div className="p-6 space-y-6">
-                    <h3 className="text-2xl font-bold text-white">
-                      {project.title}
-                    </h3>
-                    
-                    {/* Tech Stack */}
+                    <h3 className="text-2xl font-bold text-white">{project.title}</h3>
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-gray-300">Tech Stack</h4>
                       <div className="flex flex-wrap gap-3">
@@ -166,31 +134,13 @@ const Skillstrip = () => {
                         ))}
                       </div>
                     </div>
-
-                    {/* Description */}
-                    <p className="leading-relaxed text-gray-300">
-                      {project.description}
-                    </p>
-
-                    {/* Links */}
+                    <p className="leading-relaxed text-gray-300">{project.description}</p>
                     <div className="flex flex-col gap-3 sm:flex-row">
-                      <a 
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-                      >
-                        <ExternalLink size={18} />
-                        Live Demo
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                        <ExternalLink size={18} /> Live Demo
                       </a>
-                      <a 
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 bg-gray-700 border border-gray-600 rounded-lg shadow-lg hover:bg-gray-600"
-                      >
-                        <Github size={18} />
-                        GitHub
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3 text-white transition-all duration-300 bg-gray-700 border border-gray-600 rounded-lg shadow-lg hover:bg-gray-600">
+                        <Github size={18} /> GitHub
                       </a>
                     </div>
                   </div>
@@ -199,6 +149,16 @@ const Skillstrip = () => {
             );
           })}
         </div>
+
+        {/* Load More Button */}
+        <div className="flex justify-center mt-12">
+          <Link
+            to="/projects"
+            className="px-8 py-3 text-white transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 hover:scale-105"
+          >
+            Load More Projects
+          </Link>
+        </div>
       </div>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </div>
@@ -206,4 +166,3 @@ const Skillstrip = () => {
 };
 
 export default Skillstrip;
-
