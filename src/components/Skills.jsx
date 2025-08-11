@@ -96,16 +96,16 @@ const TechSkillsAccordion = () => {
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
       />
       
-      <div className="max-w-7xl xl:mr-24">
+      <div className="max-w-7xl">
         {/* Header */}
-        <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-96 xl:-ml-96 xl:mt-24">
-          <h1 className="mb-4 text-4xl font-bold text-white">
+        <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-80 xl:-ml-96 xl:mt-24">
+          <h1 className="mb-4 text-4xl font-bold text-white xl:mr-40">
             Technical Skills
           </h1>
         </div>
 
         {/* Accordion Container */}
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-1 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 xl:gap-12 md:grid-cols-1 lg:grid-cols-3">
           {accordionData.map((accordion) => (
             <div
               key={accordion.id}

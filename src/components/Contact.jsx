@@ -7,7 +7,7 @@ export const Contact = () => {
             className="flex flex-col items-start justify-between xl:flex-row"
           >
             {/* <!-- Left Text Side --> */}
-            <div className="px-6 mt-8 xl:w-1/2">
+            <div className="px-8 mt-8 xl:w-1/2">
               <h2
                 className="text-4xl font-bold leading-relaxed font-heading sm:text-4xl"
               >
