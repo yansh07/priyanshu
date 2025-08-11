@@ -88,7 +88,7 @@ const TechSkillsAccordion = () => {
   );
 
   return (
-    <div className="px-10 md:px-40">
+    <div className="px-8 md:px-40">
       {/* Include DevIcons CDN */}
       <link
         rel="stylesheet"
