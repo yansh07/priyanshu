@@ -14,7 +14,7 @@ const Skillstrip = () => {
         { name: "NodeJS", icon: "devicon-nodejs-plain" },
         { name: "Tailwind", icon: "devicon-tailwindcss-plain" }
       ],
-      description: "My portfolio website made with React, styled with Tailwind and deployed on Vercel. Add custom CSS, animation and google fonts.",
+      description: "My portfolio website made with React, styled with Tailwind and deployed on Vercel. Added custom CSS, animation and google fonts.",
       liveLink: "https://priyanshu8.vercel.app/",
       githubLink: "https://github.com/yansh07/priyanshu"
     },
