@@ -66,7 +66,7 @@ const Skillstrip = () => {
       <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 lg:px-32">
         {/* Header */}
         <div className="mb-10">
-          <h2 className="mt-24 mb-4 text-4xl font-bold text-white">My Projects</h2>
+          <h2 className="mt-8 mb-4 text-4xl font-bold text-white lg:mt-32 md:mt-24">My Projects</h2>
         </div>
 
         {/* Projects Grid */}
