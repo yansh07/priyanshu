@@ -88,7 +88,7 @@ const TechSkillsAccordion = () => {
   );
 
   return (
-    <div className="min-h-screen px-10 md:px-40">
+    <div className="px-10 md:px-40">
       {/* Include DevIcons CDN */}
       <link
         rel="stylesheet"
@@ -98,14 +98,14 @@ const TechSkillsAccordion = () => {
       
       <div className="max-w-7xl xl:mr-24">
         {/* Header */}
-        <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-96 xl:-ml-96">
+        <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-96 xl:-ml-96 xl:mt-24">
           <h1 className="mb-4 text-4xl font-bold text-white">
             Technical Skills
           </h1>
         </div>
 
         {/* Accordion Container */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-1 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-1 lg:grid-cols-3">
           {accordionData.map((accordion) => (
             <div
               key={accordion.id}
@@ -118,7 +118,7 @@ const TechSkillsAccordion = () => {
                 onClick={() => toggleAccordion(accordion.id)}
                 className="flex items-center justify-between w-full px-6 py-4 text-left transition-all duration-300 "
               >
-                <h3 className="pr-4 text-lg font-bold text-white truncate md:text-xl lg:text-2xl">
+                <h3 className="pr-4 text-lg font-bold text-white truncate md:text-xl lg:text-xl">
                   {accordion.title}
                 </h3>
                 <div className="flex-shrink-0">

@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import Skillstrip from "../components/Skillstrip";
 import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 
 function Home() {
   return (
@@ -8,6 +9,7 @@ function Home() {
       <Hero />
       <Skillstrip />
       <Skills />
+      <Contact />
     </div>
   );
 }
