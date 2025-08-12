@@ -5,7 +5,7 @@ export const Footer = () => {
         <div class="absolute max-w-4xl h-[2px]"></div>
         <div class="absolute h-[2px] bg-white/20 backdrop-blur-xl rounded-full w-[300px] md:w-[450px] lg:w-[700px] xl:w-[1125px]"></div>
       </div>
-      <div className="px-10 md:px-64 lg:px-80 lg:ml-12 xl:px-96 xl:ml-44">
+      <div className="px-14 md:px-72 lg:px-80 lg:ml-12 xl:px-96 xl:ml-44">
         <div className="flex gap-3 py-6 mt-auto">
           <a
             href="https://github.com/yansh07"
@@ -31,12 +31,16 @@ export const Footer = () => {
               aria-hidden="true"
             ></i>
           </a>
+          
           <a
-            href="/resume.pdf"
-            className="relative z-10 items-center p-3 text-lg font-medium transition duration-200 bg-transparent lg:text-2xl lg:p-4 text-white/70 hover:text-white font-soft md:p-2 md:text-lg hover:ease-in-out hover:scale-95"
-            aria-label="Resume"
+            href="https://yansh08.medium.com/"
+            className="relative z-10 p-2 transition duration-200 backdrop-xl md:p-2 lg:p-3 hover:ease-in-out hover:scale-95"
+            aria-label="Medium"
           >
-            Resume
+            <i
+              className="text-4xl md:text-2xl lg:text-4xl hover:text-white text-white/80 fa-brands fa-medium"
+              aria-hidden="true"
+            ></i>
           </a>
         </div>
       </div>
