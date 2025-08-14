@@ -5,7 +5,7 @@ export const Hero = () => {
       <div className="flex items-center mb-4 text-white/80 font-soft text-md md:text-xl md:mb-6">
         <span>Hi, I am Priyanshu</span>
         <img
-          src="/pk.jpg"
+          src="/pk.webp"
           alt="Priyanshu"
           className="object-cover w-8 h-8 ml-3 border-2 rounded-full shadow-sm md:w-10 md:h-10 border-white/50"
         />
