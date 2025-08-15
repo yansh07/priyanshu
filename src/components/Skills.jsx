@@ -14,26 +14,28 @@ const TechSkillsAccordion = () => {
   ];
 
   const Developer = [
-    {name: "Git", icons: "devicon-git-plain colored"},
-    {name: "GitHub", icons: "devicon-github-original colored"},
-    {name: "Pandas", icons: "devicon-pandas-plain"},
-    {name: "NumPy", icons: "devicon-numpy-plain"},
+    {name: "React", icons: "devicon-react-original colored"},
+    {name: "Tailwind", icons: "devicon-tailwindcss-original colored"},
+    {name: "Flask", icons: "devicon-flask-original"},
     {name: "PostgreSQL", icons: "devicon-postgresql-plain"},
     {name: "MongoDB", icons: "devicon-mongodb-plain colored"},
     {name: "MySQL", icons: "devicon-mysql-plain-wordmark"},
     {name: "SQLite", icons: "devicon-sqlite-plain-wordmark"},
     {name: "NodeJS", icons: "devicon-nodejs-plain colored"},
     {name: "Bootstrap", icons: "devicon-bootstrap-plain colored"},
+    {name: "StreamLit", icons: "devicon-streamlit-plain colored"},
+    
   ];
 
   const Tools = [
-    {name: "Tailwind", icons: "devicon-tailwindcss-original colored"},
-    {name: "Flask", icons: "devicon-flask-original"},
-    {name: "StreamLit", icons: "devicon-streamlit-plain colored"},
+    {name: "Git", icons: "devicon-git-plain colored"},
+    {name: "GitHub", icons: "devicon-github-original colored"},
+    {name: "Pandas", icons: "devicon-pandas-plain"},
+    {name: "NumPy", icons: "devicon-numpy-plain"},
     {name: "Vercel", icons: "devicon-vercel-original"},
     {name: "Replit", icons: "devicon-replit-original colored"},
     {name: "Playwright", icons: "devicon-playwright-plain colored"},
-    {name: "Bash", icons: "devicon-bash-plain colored"},
+    {name: "Bash", icons: "devicon-bash-plain"},
     {name: "NPM", icons: "devicon-npm-original-wordmark colored"},
     {name: "Supabase", icons: "devicon-supabase-plain colored"},
     {name: "Vite", icons: "devicon-vite-original colored"},
@@ -47,7 +49,7 @@ const TechSkillsAccordion = () => {
     },
     {
       id: 'frameworks',
-      title: 'Frameworks and APIs',
+      title: 'Frameworks and Database',
       items: Developer
     },
     {

@@ -24,21 +24,21 @@ export const Hero = () => {
       <div className="flex gap-3 py-6 mt-auto">
         <a
           href="https://github.com/yansh07"
-          className="relative z-10 p-2 transition duration-200 border rounded-lg backdrop-xl md:p-3 bg-gray-800/50 hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          className="relative z-10 p-2 transition duration-200 md:p-3 hover:ease-in-out backdrop-blur-md hover:scale-95"
           aria-label="GitHub"
         >
           <i className="text-4xl md:text-4xl text-white/80 hover:text-white fa-brands fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/yansh08/"
-          className="relative z-10 p-2 transition duration-200 border rounded-lg backdrop-xl md:p-3 bg-gray-800/50 hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          className="relative z-10 p-2 transition duration-200 md:p-3 hover:ease-in-out backdrop-blur-md hover:scale-95"
           aria-label="LinkedIn"
         >
           <i className="text-4xl md:text-4xl hover:text-white text-white/80 fab fa-linkedin"></i>
         </a>
         <a
           href="https://x.com/yansh_08"
-          className="relative z-10 p-2 transition duration-200 border rounded-lg backdrop-xl md:p-3 bg-gray-800/50 hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          className="relative z-10 p-2 transition duration-200 md:p-3 hover:ease-in-out backdrop-blur-md hover:scale-95"
           aria-label="Twitter"
         >
           <i
@@ -48,7 +48,7 @@ export const Hero = () => {
         </a>
         <a
           href="/resume.pdf"
-          className="relative z-10 items-center p-3 text-lg font-medium transition duration-200 border rounded-lg text-white/70 hover:text-white font-soft md:p-3 md:text-2xl backdrop-xl bg-gray-800/50 hover:ease-in-out backdrop-blur-md border-white/5 hover:scale-95"
+          className="relative z-10 items-center p-3 text-lg font-medium transition duration-200 text-white/70 hover:text-white font-soft md:p-3 md:text-2xl hover:ease-in-out backdrop-blur-md hover:scale-95"
           aria-label="Resume"
         >
           Resume
