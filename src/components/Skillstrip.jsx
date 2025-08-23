@@ -34,17 +34,17 @@ const Skillstrip = () => {
     },
     {
       id: 3,
-      title: "Spends Tracker App",
-      image: "/spend.webp",
+      title: "Nimbus Weather App",
+      image: "/weather.webp",
       techStack: [
-        { name: "Python", icon: "devicon-python-plain coloured" },
+        { name: "React", icon: "devicon-react-original coloured" },
         { name: "Tailwind", icon: "devicon-tailwindcss-original" },
-        { name: "Streamlit", icon: "devicon-streamlit-plain coloured" },
-        { name: "Pandas", icon: "devicon-pandas-plain" }
+        { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+        { name: "Vercel", icon: "devicon-vercel-original" }
       ],
-      description: "Created a minimalist spending tracker app integrated with Google Sheets. Implemented Gmail automation for monthly spending reports. Developed a secure and mobile-friendly user interface.",
-      liveLink: "https://pocketflow.streamlit.app/",
-      githubLink: "https://github.com/yansh07/spend-Tracker"
+      description: "A simple and responsive weather application, It fetches live weather data using the OpenWeather API and displays temperature, conditions, and location details.",
+      liveLink: "https://chaiandrain.vercel.app/",
+      githubLink: "https://github.com/yansh07/weather-app"
     },
     {
       id: 4,
