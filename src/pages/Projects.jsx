@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const Skillstrip = () => {
   const projects = [
@@ -47,22 +48,24 @@ const Skillstrip = () => {
     },
     {
       id: 4,
-      title: "ToDo App",
-      image: "/todo.webp",
+      title: "Planit: Notes App",
+      image: "/planit.webp",
       techStack: [
-        { name: "Python", icon: "devicon-python-plain coloured" },
+        { name: "MongoDB", icon: "devicon-mongodb-plain-wordmark" },
+        { name: "ExpressJS", icon: "devicon-express-original-wordmark" },
+        { name: "React", icon: "devicon-react-original coloured" },
+        { name: "NodeJS", icon: "devicon-nodejs-plain" },
         { name: "Tailwind", icon: "devicon-tailwindcss-original" },
-        { name: "Streamlit", icon: "devicon-streamlit-plain coloured" },
-        { name: "MongoDB", icon: "devicon-mongodb-plain" }
+        { name: "Railway", icon: "devicon-railway-original colored" }
       ],
-      description: "Developed a full-stack ToDo web application using Flask and PostgreSQL with complete user authentication (login/register). Integrated Supabase as a remote PostgreSQL backend, handling all CRUD operations for ToDos.",
-      liveLink: "https://flask-todo-app-7cqt.onrender.com/login",
-      githubLink: "https://github.com/yansh07/todo"
+      description: "Built PlanIt: Notes App with React, Node.js, Express, MongoDB, and Cloudinary. Implemented JWT authentication, password hashing, and file uploads. Added features like real-time CRUD operation, responsive UI, and label based custom background.",
+      liveLink: "https://planitfirst.vercel.app/",
+      githubLink: "https://github.com/yansh07/todo-frontend"
     }
   ];
 
   return (
-    <div className="min-h-screen px-10 py-2 ">
+    <div className="min-h-screen px-10 py-2">
       <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 lg:px-32">
         {/* Header */}
         <div className="mb-10">
@@ -201,6 +204,7 @@ const Skillstrip = () => {
         </div>
       </div>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+      <Footer />
     </div>
   );
 };

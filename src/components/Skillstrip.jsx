@@ -20,17 +20,19 @@ const Skillstrip = () => {
     },
     {
       id: 2,
-      title: "AI Assistant",
-      image: "/ai.webp",
+      title: "Planit: Notes App",
+      image: "/planit.webp",
       techStack: [
-        { name: "GitHub", icon: "devicon-github-original" },
-        { name: "Python", icon: "devicon-python-plain" },
-        { name: "Playwright", icon: "devicon-playwright-plain" },
-        { name: "Bash", icon: "devicon-bash-plain coloured" }
+        { name: "MongoDB", icon: "devicon-mongodb-plain-wordmark" },
+        { name: "ExpressJS", icon: "devicon-express-original-wordmark" },
+        { name: "React", icon: "devicon-react-original coloured" },
+        { name: "NodeJS", icon: "devicon-nodejs-plain" },
+        { name: "Tailwind", icon: "devicon-tailwindcss-original" },
+        { name: "Railway", icon: "devicon-railway-original colored" }
       ],
-      description: "A CLI based AI Assistant app, used OpenAI API, OpenAI Whisper model, Microsoft Edge TTS, Porcupine and Playwright for automation.",
-      liveLink: "https://github.com/yansh07/AiAssistant",
-      githubLink: "https://github.com/yansh07/AiAssistant"
+      description: "Built PlanIt: Notes App with React, Node.js, Express, MongoDB, and Cloudinary. Implemented JWT authentication, password hashing, and file uploads. Added features like real-time CRUD operation, responsive UI, and label based custom background.",
+      liveLink: "https://planitfirst.vercel.app/",
+      githubLink: "https://github.com/yansh07/todo-frontend"
     },
     {
       id: 3,
@@ -48,17 +50,17 @@ const Skillstrip = () => {
     },
     {
       id: 4,
-      title: "ToDo App",
-      image: "/todo.webp",
+      title: "AI Assistant",
+      image: "/ai.webp",
       techStack: [
-        { name: "Python", icon: "devicon-python-plain coloured" },
-        { name: "Tailwind", icon: "devicon-tailwindcss-original" },
-        { name: "Streamlit", icon: "devicon-streamlit-plain coloured" },
-        { name: "MongoDB", icon: "devicon-mongodb-plain" }
+        { name: "GitHub", icon: "devicon-github-original" },
+        { name: "Python", icon: "devicon-python-plain" },
+        { name: "Playwright", icon: "devicon-playwright-plain" },
+        { name: "Bash", icon: "devicon-bash-plain coloured" }
       ],
-      description: "Developed a full-stack ToDo web application using Flask and PostgreSQL with complete user authentication (login/register). Integrated Supabase as a remote PostgreSQL backend, handling all CRUD operations for ToDos.",
-      liveLink: "https://flask-todo-app-7cqt.onrender.com/login",
-      githubLink: "https://github.com/yansh07/todo"
+      description: "A CLI based AI Assistant app, used OpenAI API, OpenAI Whisper model, Microsoft Edge TTS, Porcupine and Playwright for automation.",
+      liveLink: "https://github.com/yansh07/AiAssistant",
+      githubLink: "https://github.com/yansh07/AiAssistant"
     }
   ];
 
