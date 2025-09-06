@@ -30,11 +30,11 @@ export const Hero = () => {
           <i className="text-4xl md:text-4xl text-white/80 hover:text-white fa-brands fa-github"></i>
         </a>
         <a
-          href="https://www.linkedin.com/in/yansh08/"
+          href="mailto:pksingh69313@gmail.com"
           className="relative z-10 p-2 transition duration-200 md:p-3 hover:ease-in-out backdrop-blur-md hover:scale-95"
-          aria-label="LinkedIn"
+          aria-label="Email"
         >
-          <i className="text-4xl md:text-4xl hover:text-white text-white/80 fab fa-linkedin"></i>
+          <i className="text-4xl md:text-4xl hover:text-white text-white/80 fa-solid fa-envelope"></i>
         </a>
         <a
           href="https://x.com/yansh_08"

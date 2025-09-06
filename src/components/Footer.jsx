@@ -15,11 +15,11 @@ export const Footer = () => {
             <i className="text-4xl md:text-2xl lg:text-4xl text-white/80 hover:text-white fa-brands fa-github"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/yansh08/"
+            href="mailto:pksingh69313@gmail.com"
             className="relative z-10 p-2 transition duration-200 backdrop-xl md:p-2 lg:p-3 hover:ease-in-out hover:scale-95"
-            aria-label="LinkedIn"
+            aria-label="Email"
           >
-            <i className="text-4xl md:text-2xl lg:text-4xl hover:text-white text-white/80 fab fa-linkedin"></i>
+            <i className="text-4xl md:text-2xl lg:text-4xl hover:text-white text-white/80 fa-solid fa-envelope"></i>
           </a>
           <a
             href="https://x.com/yansh_08"
