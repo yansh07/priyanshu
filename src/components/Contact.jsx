@@ -2,16 +2,16 @@ import React from 'react'
 
 export const Contact = () => {
   return (
-    <div className='px-2 mt-10 text-white bg-transparent md:px-32 xl:mt-12'>
+    <div className='px-2 -mt-12 text-white bg-transparent md:px-32 xl:mt-2'>
       <div
             className="flex flex-col items-start justify-between xl:flex-row"
           >
             {/* <!-- Left Text Side --> */}
             <div className="px-8 mt-8 xl:w-1/2">
               <h2
-                className="text-4xl font-bold leading-relaxed font-heading sm:text-4xl"
+                className="text-4xl font-extrabold leading-relaxed font-heading md:text-5xl xl:text-5xl"
               >
-                Contact me
+                Con<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">tact me</span>
               </h2>
               <p className="mt-3 mb-3 text-xl text-purple-400 glowing-text">
                 Have any suggestions or project idea?

@@ -1,161 +1,106 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import React, { useEffect } from "react";
+import Tilt from "react-parallax-tilt";
 
-const TechSkillsAccordion = () => {
-  const [openAccordion, setOpenAccordion] = useState(null);
-
-  const Language = [
-    { name: "C", icons: "devicon-c-plain colored" },
+const techSkillsData = {
+  "Languages & Core Tech": [
     { name: "HTML", icons: "devicon-html5-plain colored" },
     { name: "CSS", icons: "devicon-css3-plain colored" },
     { name: "JavaScript", icons: "devicon-javascript-plain colored" },
     { name: "TypeScript", icons: "devicon-typescript-plain colored" },
     { name: "Python", icons: "devicon-python-plain colored" },
-  ];
-
-  const Developer = [
-    { name: "MongoDB", icons: "devicon-mongodb-plain-wordmark" },
-    { name: "ExpressJS", icons: "devicon-express-original-wordmark" },
-    { name: "React", icons: "devicon-react-original coloured" },
-    { name: "NodeJS", icons: "devicon-nodejs-plain" },
+    { name: "C", icons: "devicon-c-plain colored" },
+  ],
+  "Frontend & Backend": [
+    { name: "React", icons: "devicon-react-original colored" },
     { name: "Tailwind", icons: "devicon-tailwindcss-original colored" },
+    { name: "Node.js", icons: "devicon-nodejs-plain" },
+    { name: "Express.js", icons: "devicon-express-original-wordmark" },
     { name: "Flask", icons: "devicon-flask-original" },
+  ],
+  "Tools & Databases": [
+    { name: "MongoDB", icons: "devicon-mongodb-plain-wordmark" },
     { name: "MySQL", icons: "devicon-mysql-plain-wordmark" },
-  ];
-
-  const Tools = [
     { name: "Git", icons: "devicon-git-plain colored" },
-    { name: "GitHub", icons: "devicon-github-original colored" },
+    { name: "GitHub", icons: "devicon-github-original" },
     { name: "Pandas", icons: "devicon-pandas-plain" },
     { name: "NumPy", icons: "devicon-numpy-plain" },
     { name: "Playwright", icons: "devicon-playwright-plain colored" },
     { name: "Bash", icons: "devicon-bash-plain" },
-  ];
+  ],
+};
 
-  const accordionData = [
-    {
-      id: "languages",
-      title: "Languages",
-      items: Language,
-    },
-    {
-      id: "frameworks",
-      title: "Frameworks and Database",
-      items: Developer,
-    },
-    {
-      id: "tools",
-      title: "Developer Tools",
-      items: Tools,
-    },
-  ];
+const SkillCard = ({ name, icons, index }) => (
+  <Tilt
+    className="group relative 
+      h-24 w-24 sm:h-28 sm:w-28 md:h-26 md:w-26 lg:h-28 lg:w-28 xl:h-36 xl:w-36
+      overflow-hidden rounded-xl border border-white/5 
+      bg-gray-900/40 p-1 backdrop-blur-md 
+      transition-all duration-300 hover:scale-[1.03]"
+    perspective={1000}
+    transitionSpeed={1500}
+    scale={1.02}
+  >
+    {/* Animated shine effect on hover */}
+    <div className="absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none group-hover:opacity-100 bg-gradient-to-tr from-cyan-400/50 to-purple-400/50 blur-xl" />
 
-  const toggleAccordion = (accordionId) => {
-    setOpenAccordion(openAccordion === accordionId ? null : accordionId);
-  };
-
-  const TechLabel = ({ tech, index }) => (
-    <div
-      className="relative p-3 overflow-hidden transition-all duration-300 border rounded-lg group bg-gray-800/50 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-105 hover:shadow-lg"
-      style={{
-        animationDelay: `${index * 0.1}s`,
-        animation: "fadeInUp 0.6s ease-out forwards",
-      }}
-    >
-      {/* Blur background overlay */}
-      <div className="absolute inset-0 rounded-lg backdrop-blur-xl" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center space-y-2 text-center">
-        <div className="text-2xl md:text-3xl">
-          <i className={tech.icons} style={{ fontSize: "inherit" }}></i>
-        </div>
-        <span className="w-full text-sm font-medium text-white truncate md:text-base">
-          {tech.name}
-        </span>
+    {/* The actual card content */}
+    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-4 space-y-2 text-center transition-transform duration-300 rounded-xl bg-gray-900/60">
+      <div className="text-3xl text-white md:text-4xl">
+        <i className={icons}></i>
       </div>
-
-      {/* Hover effect */}
-      <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <span className="w-full text-sm font-medium text-white md:text-base">
+        {name}
+      </span>
     </div>
-  );
+
+    {/* Custom gradient border on hover */}
+    <div className="absolute inset-0 z-0 rounded-2xl transition-all duration-500 group-hover:bg-[conic-gradient(from_270deg_at_50%_50%,transparent_0deg_30deg,#19647E_200deg_270deg,transparent_360deg)] animate-spin-slow"></div>
+  </Tilt>
+);
+
+const TechSkillsGrid = () => {
+  useEffect(() => {
+    // This is where i will add a library for staggered animations like AOS or framer-motion
+    // For now, let's keep it simple with the CSS animation from my original code.
+  }, []);
 
   return (
-    <div className="px-8 md:px-40">
-      {/* Include DevIcons CDN */}
+    <div className="min-h-screen px-4 py-16 md:px-36 lg:px-42 bg-gray-950">
       <link
         rel="stylesheet"
         type="text/css"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
       />
 
-      <div className="max-w-7xl">
-        {/* Header */}
-        <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-80 xl:-ml-96 xl:mt-24">
-          <h1 className="mb-4 text-4xl font-bold text-white xl:mr-40">
-            Technical Skills
+      <div className="mx-auto max-w-7xl">
+        <div className="px-6 mb-12">
+          <h1 className="text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-5xl">
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Tech Stack</span>
           </h1>
+          <p className="mt-4 text-lg text-purple-400 md:text-xl">
+            A list of technologies I use to build modern, scalable applications.
+          </p>
         </div>
 
-        {/* Accordion Container */}
-        <div className="grid grid-cols-1 gap-3 xl:gap-12 md:grid-cols-1 lg:grid-cols-3">
-          {accordionData.map((accordion) => (
-            <div
-              key={accordion.id}
-              className={`bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden transition-all duration-300 ${
-                openAccordion === accordion.id
-                  ? "lg:col-span-3 lg:row-span-1"
-                  : ""
-              }`}
-            >
-              {/* Accordion Header */}
-              <button
-                onClick={() => toggleAccordion(accordion.id)}
-                className="flex items-center justify-between w-full px-6 py-4 text-left transition-all duration-300 "
-              >
-                <h3 className="pr-4 text-lg font-bold text-white truncate md:text-xl lg:text-xl">
-                  {accordion.title}
-                </h3>
-                <div className="flex-shrink-0">
-                  {openAccordion === accordion.id ? (
-                    <ChevronUp className="w-6 h-6 transition-transform duration-300 text-cyan-400" />
-                  ) : (
-                    <ChevronDown className="w-6 h-6 transition-transform duration-300 text-white/70" />
-                  )}
+        {Object.entries(techSkillsData).map(([category, skills]) => (
+          <div key={category} className="mb-8">
+            <h2 className="px-6 mb-8 text-2xl font-bold text-white md:text-3xl md:text-left">
+              {category}
+            </h2>
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 justify-items-center">
+              {skills.map((skill, index) => (
+                <div
+                  key={skill.name}
+                  className="animate-fadeInUp"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  <SkillCard {...skill} index={index} />
                 </div>
-              </button>
-
-              {/* Accordion Content */}
-              <div
-                className={`transition-all duration-500 ease-in-out ${
-                  openAccordion === accordion.id
-                    ? "max-h-96 lg:max-h-none opacity-100"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="px-6 pb-6">
-                  {/* Scrollable container for small screens, normal for large screens */}
-                  <div
-                    className={`${
-                      openAccordion === accordion.id
-                        ? "max-h-80 lg:max-h-none overflow-y-auto lg:overflow-visible"
-                        : "overflow-hidden"
-                    } scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent`}
-                  >
-                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3">
-                      {accordion.items.map((tech, index) => (
-                        <TechLabel key={tech.name} tech={tech} index={index} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-      {/* Custom CSS for animations and scrollbar */}
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -167,33 +112,9 @@ const TechSkillsAccordion = () => {
             transform: translateY(0);
           }
         }
-
-        /* Custom scrollbar styles */
-        .scrollbar-thin {
-          scrollbar-width: thin;
-          scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar {
-          width: 6px;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-track {
-          background: transparent;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-          background-color: rgba(255, 255, 255, 0.2);
-          border-radius: 3px;
-          border: none;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-          background-color: rgba(255, 255, 255, 0.3);
-        }
       `}</style>
     </div>
   );
 };
 
-export default TechSkillsAccordion;
+export default TechSkillsGrid;

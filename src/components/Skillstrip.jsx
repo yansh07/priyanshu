@@ -66,10 +66,10 @@ const Skillstrip = () => {
 
   return (
     <div className="min-h-screen px-10 py-2 ">
-      <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 lg:px-32">
+      <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 xl:ml-16 lg:px-32">
         {/* Header */}
         <div className="mb-10">
-          <h2 className="mb-4 text-4xl font-bold text-white">My Projects</h2>
+          <h2 className="mb-4 text-4xl font-extrabold text-white md:text-5xl lg:text-5xl xl:text-5xl">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Projects</span></h2>
         </div>
 
         {/* Show ONLY first 2 projects */}

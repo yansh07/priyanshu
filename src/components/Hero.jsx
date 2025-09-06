@@ -13,7 +13,7 @@ export const Hero = () => {
 
       <div className="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:space-x-8 md:gap-4 xl:mr-12">
         <h1 className="text-5xl font-bold leading-none text-white font-soft md:text-6xl text-pretty">
-          Full-Stack Developer
+          Full-<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Stack Developer</span>
         </h1>
 
         <p className="text-xl hover:text-white text-white/80 font-soft md:text-2xl">
