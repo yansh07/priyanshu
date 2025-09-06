@@ -1,62 +1,53 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const TechSkillsAccordion = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
 
   const Language = [
-    {name: 'C', icons: "devicon-c-plain colored"},
-    {name: "HTML", icons: "devicon-html5-plain colored"},
-    {name: "CSS", icons: "devicon-css3-plain colored"},
-    {name: "JavaScript", icons: "devicon-javascript-plain colored"},
-    {name: "TypeScript", icons: "devicon-typescript-plain colored"},
-    {name: "Python", icons: "devicon-python-plain colored"}
+    { name: "C", icons: "devicon-c-plain colored" },
+    { name: "HTML", icons: "devicon-html5-plain colored" },
+    { name: "CSS", icons: "devicon-css3-plain colored" },
+    { name: "JavaScript", icons: "devicon-javascript-plain colored" },
+    { name: "TypeScript", icons: "devicon-typescript-plain colored" },
+    { name: "Python", icons: "devicon-python-plain colored" },
   ];
 
   const Developer = [
-    {name: "React", icons: "devicon-react-original colored"},
-    {name: "Tailwind", icons: "devicon-tailwindcss-original colored"},
-    {name: "Flask", icons: "devicon-flask-original"},
-    {name: "PostgreSQL", icons: "devicon-postgresql-plain"},
-    {name: "MongoDB", icons: "devicon-mongodb-plain colored"},
-    {name: "MySQL", icons: "devicon-mysql-plain-wordmark"},
-    {name: "SQLite", icons: "devicon-sqlite-plain-wordmark"},
-    {name: "NodeJS", icons: "devicon-nodejs-plain colored"},
-    {name: "Bootstrap", icons: "devicon-bootstrap-plain colored"},
-    {name: "StreamLit", icons: "devicon-streamlit-plain colored"},
-    
+    { name: "MongoDB", icons: "devicon-mongodb-plain-wordmark" },
+    { name: "ExpressJS", icons: "devicon-express-original-wordmark" },
+    { name: "React", icons: "devicon-react-original coloured" },
+    { name: "NodeJS", icons: "devicon-nodejs-plain" },
+    { name: "Tailwind", icons: "devicon-tailwindcss-original colored" },
+    { name: "Flask", icons: "devicon-flask-original" },
+    { name: "MySQL", icons: "devicon-mysql-plain-wordmark" },
   ];
 
   const Tools = [
-    {name: "Git", icons: "devicon-git-plain colored"},
-    {name: "GitHub", icons: "devicon-github-original colored"},
-    {name: "Pandas", icons: "devicon-pandas-plain"},
-    {name: "NumPy", icons: "devicon-numpy-plain"},
-    {name: "Vercel", icons: "devicon-vercel-original"},
-    {name: "Replit", icons: "devicon-replit-original colored"},
-    {name: "Playwright", icons: "devicon-playwright-plain colored"},
-    {name: "Bash", icons: "devicon-bash-plain"},
-    {name: "NPM", icons: "devicon-npm-original-wordmark colored"},
-    {name: "Supabase", icons: "devicon-supabase-plain colored"},
-    {name: "Vite", icons: "devicon-vite-original colored"},
+    { name: "Git", icons: "devicon-git-plain colored" },
+    { name: "GitHub", icons: "devicon-github-original colored" },
+    { name: "Pandas", icons: "devicon-pandas-plain" },
+    { name: "NumPy", icons: "devicon-numpy-plain" },
+    { name: "Playwright", icons: "devicon-playwright-plain colored" },
+    { name: "Bash", icons: "devicon-bash-plain" },
   ];
 
   const accordionData = [
     {
-      id: 'languages',
-      title: 'Languages',
-      items: Language
+      id: "languages",
+      title: "Languages",
+      items: Language,
     },
     {
-      id: 'frameworks',
-      title: 'Frameworks and Database',
-      items: Developer
+      id: "frameworks",
+      title: "Frameworks and Database",
+      items: Developer,
     },
     {
-      id: 'tools',
-      title: 'Developer Tools',
-      items: Tools
-    }
+      id: "tools",
+      title: "Developer Tools",
+      items: Tools,
+    },
   ];
 
   const toggleAccordion = (accordionId) => {
@@ -66,18 +57,18 @@ const TechSkillsAccordion = () => {
   const TechLabel = ({ tech, index }) => (
     <div
       className="relative p-3 overflow-hidden transition-all duration-300 border rounded-lg group bg-gray-800/50 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-105 hover:shadow-lg"
-      style={{ 
+      style={{
         animationDelay: `${index * 0.1}s`,
-        animation: 'fadeInUp 0.6s ease-out forwards'
+        animation: "fadeInUp 0.6s ease-out forwards",
       }}
     >
       {/* Blur background overlay */}
       <div className="absolute inset-0 rounded-lg backdrop-blur-xl" />
-      
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center space-y-2 text-center">
         <div className="text-2xl md:text-3xl">
-          <i className={tech.icons} style={{ fontSize: 'inherit' }}></i>
+          <i className={tech.icons} style={{ fontSize: "inherit" }}></i>
         </div>
         <span className="w-full text-sm font-medium text-white truncate md:text-base">
           {tech.name}
@@ -97,7 +88,7 @@ const TechSkillsAccordion = () => {
         type="text/css"
         href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
       />
-      
+
       <div className="max-w-7xl">
         {/* Header */}
         <div className="mt-16 mb-8 mr-8 text-center md:mr-48 lg:mr-96 lg:-ml-16 xl:mr-80 xl:-ml-96 xl:mt-24">
@@ -112,7 +103,9 @@ const TechSkillsAccordion = () => {
             <div
               key={accordion.id}
               className={`bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden transition-all duration-300 ${
-                openAccordion === accordion.id ? 'lg:col-span-3 lg:row-span-1' : ''
+                openAccordion === accordion.id
+                  ? "lg:col-span-3 lg:row-span-1"
+                  : ""
               }`}
             >
               {/* Accordion Header */}
@@ -135,18 +128,20 @@ const TechSkillsAccordion = () => {
               {/* Accordion Content */}
               <div
                 className={`transition-all duration-500 ease-in-out ${
-                  openAccordion === accordion.id 
-                    ? 'max-h-96 lg:max-h-none opacity-100' 
-                    : 'max-h-0 opacity-0'
+                  openAccordion === accordion.id
+                    ? "max-h-96 lg:max-h-none opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-6 pb-6">
                   {/* Scrollable container for small screens, normal for large screens */}
-                  <div className={`${
-                    openAccordion === accordion.id 
-                      ? 'max-h-80 lg:max-h-none overflow-y-auto lg:overflow-visible' 
-                      : 'overflow-hidden'
-                  } scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent`}>
+                  <div
+                    className={`${
+                      openAccordion === accordion.id
+                        ? "max-h-80 lg:max-h-none overflow-y-auto lg:overflow-visible"
+                        : "overflow-hidden"
+                    } scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent`}
+                  >
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-3">
                       {accordion.items.map((tech, index) => (
                         <TechLabel key={tech.name} tech={tech} index={index} />
