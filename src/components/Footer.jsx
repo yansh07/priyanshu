@@ -5,7 +5,7 @@ export const Footer = () => {
         <div class="absolute max-w-4xl h-[2px]"></div>
         <div class="absolute h-[2px] bg-white/20 backdrop-blur-xl rounded-full w-[300px] md:w-[450px] lg:w-[700px] xl:w-[1125px]"></div>
       </div>
-      <div className="px-2 md:px-52 lg:px-80 lg:ml-6 xl:px-96 xl:ml-40">
+      <div className="px-14 md:px-64 lg:px-80 lg:ml-6 xl:px-96 xl:ml-40">
         <div className="flex gap-3 py-6 mt-auto">
           <a
             href="https://github.com/yansh07"
