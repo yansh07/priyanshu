@@ -69,7 +69,7 @@ const Skillstrip = () => {
       <div className="mx-auto max-w-7xl md:px-32 md:-mt-16 md:mr-4 xl:px-16 lg:px-32">
         {/* Header */}
         <div className="mb-10">
-          <h2 className="mt-8 mb-4 text-4xl font-bold text-white lg:mt-32 md:mt-24">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Projects</span></h2>
+          <h2 className="mt-8 mb-4 text-4xl font-extrabold text-white xl:text-5xl lg:mt-32 lg:text-5xl md:mt-24">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">Projects</span></h2>
         </div>
 
         {/* Projects Grid */}
