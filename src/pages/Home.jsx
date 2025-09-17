@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 function Home() {
   return (
-    <div>
+    <div className='bg-[#060010] min-h-screen'>
         <Navbar />
         <Hero />
     </div>
