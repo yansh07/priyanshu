@@ -98,7 +98,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
         </div>
         <div className="hover:bg-[#060000] border border-gray-700 flex flex-row items-center justify-center mt-4 rounded-lg p-2 hover:brightness-200 backdrop-blur-2xl bg-black/20 hover:scale-90 hover:duration-300">
             <div>
-                <a href="../components/Projectsum.jsx">
+                <a href="/project">
                 <i class="fa-brands fa-wpexplorer text-gray-200 text-xl pt-1"></i>
                 <span className="text-gray-50 font-mono text-lg px-4">More Projects</span>
                 </a>
