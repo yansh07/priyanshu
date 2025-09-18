@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import Project from '../components/Project';
+import Skills from '../components/Skill';
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Navbar />
       <Hero />
       <Project />
+      <Skills />
       
       {/* Custom Animations CSS */}
       <style jsx>{`
@@ -42,6 +44,7 @@ function Home() {
         .animate-spin-slow {
           animation: spin 8s linear infinite;
         }
+        
       `}</style>
     </div>
   );

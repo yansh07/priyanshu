@@ -52,7 +52,7 @@ function Hero() {
               </div>
             </div>
 
-            <p className="
+            <div className="
               text-gray-300 font-mono text-lg md:text-xl xl:text-2xl leading-relaxed
               hover:text-gray-100 transition-colors duration-500
               relative group cursor-default
@@ -78,7 +78,7 @@ function Hero() {
                 absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 
                 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500
               "></div>
-            </p>
+            </div>
           </div>
 
           {/* Right side - Image and Social Links */}
