@@ -13,7 +13,7 @@ function Hero() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-36 md:py-40 lg:ml-12 pb-8">
+    <div className="min-h-screen flex items-center justify-center px-4 py-36 md:py-40 lg:ml-12 pb-8 md:pb-14">
       <section 
         className="max-w-6xl w-full relative"
         onMouseMove={handleMouseMove}
