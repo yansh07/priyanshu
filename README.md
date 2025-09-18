@@ -23,7 +23,7 @@ Hey there!
 4. Playwright - For automation tasks, like searching web, summarizing results, and other such browser tasks.
 5. Microsoft Edge TTS - For Text to speech.
 
-## 3. [Notes App: PlanIt](https://plaintfirst.vercel.app) 🔗  
+## 3. [Notes App: PlanIt](https://plaintfirst.vercel.app) 📝   
 *Tech used: MongoDB, Express.JS, React.JS, Node.JS, TailwindCSS, Cloudinary, Multer, JWT, OAuth, CI/CD*  
 
 -Engineered a full-stack application with JWT authentication and third-party authentication, securing user data for 50+ active users.  
@@ -31,7 +31,7 @@ Hey there!
 -Deployed a scalable backend on Railway and a CDN-fronted frontend on Vercel, achieving a 95% Lighthouse performance score.  
 -*Result: The app handles over 100+ CRUD operations daily with no downtime* 
 
-## 4. [Weather App: Nimbus](https://chaiandrain.vercel.app) 🔗  
+## 4. [Weather App: Nimbus](https://chaiandrain.vercel.app) 🌦️  
 *Tech used: React JS, JavaScript, Tailwind CSS, Vercel, GitHub, Node.js, Express.js*  
 
 -A simple and responsive weather application built with React + Vite + Tailwind CSS.  
@@ -40,7 +40,6 @@ Hey there!
 -Serves 200+ daily users with real-time.  
 
 ## My tool box has following payloads:  
-[![My Skills](https://skillicons.dev/icons?i=c,python,html,css,javascript,&theme=dark)](https://skillicons.dev)  
 
 **1. Programming Language:** JavaScript (Proficient), Python (Proficient), C++ (Intermediate).  
 **2. Frontend:** React, HTML5, CSS, Tailwind CSS, Vite.    
