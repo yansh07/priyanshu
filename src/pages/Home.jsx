@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Project from '../components/Project';
 import Skills from '../components/Skill';
 import Blog from '../components/Blog';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Project />
       <Skills />
       <Blog />
+      <Footer />
       
       {/* Custom Animations CSS */}
       <style jsx>{`

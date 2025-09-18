@@ -3,7 +3,7 @@ import BlogCard from "./BlogCard";
 
 const Blog = () => {
   return (
-    <div className="relative mt-0 md:-mt-46 md:px-2 lg:px-12 xl:px-36 lg:-mt-70">
+    <div className="relative mt-0 md:-mt-46 md:px-2 lg:px-12 xl:px-36 lg:-mt-44 xl:-mt-64">
       <div>
         <h1
           className="font-mono bg-gradient-to-r from-blue-100 to-blue-300
