@@ -1,58 +1,28 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
-import Project from '../components/Project';
-import Skills from '../components/Skill';
-import Blog from '../components/Blog';
-import Footer from '../components/Footer';
+
+// Lazy load heavy components
+const Project = lazy(() => import('../components/Project'));
+const Skills = lazy(() => import('../components/Skill'));
+const Blog = lazy(() => import('../components/Blog'));
+const Footer = lazy(() => import('../components/Footer'));
 
 function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <Navbar />
       <Hero />
-      <Project />
-      <Skills />
-      <Blog />
-      <Footer />
       
-      {/* Custom Animations CSS */}
-      <style jsx>{`
-        @keyframes gradientShift {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        .animate-gradient {
-          animation: gradient 3s ease infinite;
-        }
-        
-        .bg-300% {
-          background-size: 300%;
-        }
-        
-        .bg-pos-0 {
-          background-position: 0% 50%;
-        }
-        
-        .bg-pos-100 {
-          background-position: 100% 50%;
-        }
-        
-        .animate-spin-slow {
-          animation: spin 8s linear infinite;
-        }
-        
-      `}</style>
+      <Suspense fallback={<div className="h-20 flex items-center justify-center"><div className="animate-spin h-6 w-6 border-2 border-blue-500 rounded-full border-t-transparent"></div></div>}>
+        <Project />
+        <Skills />
+        <Blog />
+        <Footer />
+      </Suspense>
+      
+      {/* Your existing styles */}
     </div>
   );
 }
-
-
 export default Home
