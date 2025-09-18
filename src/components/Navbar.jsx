@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 
 function Navbar() {
@@ -19,9 +20,6 @@ function Navbar() {
         backdrop-blur-xl bg-black/20 transition-all duration-500 ease-out
         ${scrolled ? 'shadow-2xl shadow-blue-500/20 bg-black/40' : 'shadow-lg shadow-blue-500/10'}
         hover:shadow-2xl hover:shadow-blue-500/30 hover:bg-black/30
-        before:absolute before:inset-0 before:rounded-2xl 
-        before:bg-gradient-to-r before:from-blue-500/5 before:to-purple-500/5
-        before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300
       `}>
         
         {/* Logo Section + img */}
@@ -48,25 +46,19 @@ function Navbar() {
           </span>
         </div>
 
-        {/* Resume  */}
+        {/* Resume Button - CLEANED */}
         <a href="/resume.pdf" target="_blank" className="group relative">
           <span className="
             font-[satoshi] text-gray-300 font-medium text-lg md:text-xl
             border border-gray-500/50 rounded-full px-6 py-2
             bg-gradient-to-r from-gray-800/50 to-gray-700/30
-            transition-all duration-500 ease-out
+            transition-all duration-300 ease-out
             hover:scale-105 hover:text-white hover:border-blue-400/70
             hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]
             hover:bg-gradient-to-r hover:from-blue-600/30 hover:via-purple-600/20 hover:to-blue-800/30
-            relative overflow-hidden
-            before:absolute before:inset-0 before:bg-gradient-to-r 
-            before:from-white/10 before:to-transparent before:translate-x-[-100%]
-            hover:before:translate-x-[100%] before:transition-transform before:duration-700
-            after:absolute after:inset-0 after:rounded-full
-            after:bg-gradient-to-r after:from-blue-500/20 after:to-purple-500/20
-            after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300
+            relative
           ">
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="flex items-center gap-2">
               Resume
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
             </span>
