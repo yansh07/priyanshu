@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-function Project() {
+function Projectsum() {
   return (
     <div>
       <section className="grid grid-cols-1 p-4">
@@ -98,7 +98,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default Project;
+export default Projectsum
