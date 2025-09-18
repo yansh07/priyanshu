@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import Project from '../components/Project';
 import Skills from '../components/Skill';
+import Blog from '../components/Blog';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Hero />
       <Project />
       <Skills />
+      <Blog />
       
       {/* Custom Animations CSS */}
       <style jsx>{`

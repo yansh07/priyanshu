@@ -1,40 +1,3 @@
-// import React from "react";
-// import LetterGlitch from "./Letter";
-
-// function Skill() {
-//   return (
-//     <div>
-//       <section className="grid grid-cols-1 max-w-6xl min-h-screen">
-//         {/* left side - letter glitch  */}
-//         <div className=" p-4 h-[405px] py-8">
-//           <LetterGlitch />
-//         </div>
-
-//         {/* right side - texh stack  */}
-//         <div>
-//           <h1
-//             className="-mt-36  font-mono bg-gradient-to-r from-blue-100 to-blue-300
-//                   bg-clip-text text-transparent text-4xl xl:text-5xl px-6 font-bold mb-4"
-//           >
-//             Sk
-//             <span className="bg-gradient-to-r from-blue-300 to-blue-600 bg-clip-text text-transparent">
-//               ills
-//             </span>
-//           </h1>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default Skill;
-
-// {/* <LetterGlitch
-//   glitchSpeed={50}
-//   centerVignette={true}
-//   outerVignette={false}
-//   smooth={true}
-// /> */}
 import React from "react";
 
 const techCategories = [
@@ -83,7 +46,7 @@ function Skills() {
       {/* main content box with the max-width constraint */}
       <div className="w-full max-w-6xl">
         <h1
-          className="pt-10 md:-mt-48 xl:-mt-78 font-mono bg-gradient-to-r from-blue-100 to-blue-300
+          className="pt-10 md:px-1 md:-mt-48 xl:-mt-78 font-mono bg-gradient-to-r from-blue-100 to-blue-300
                   bg-clip-text text-transparent text-4xl xl:text-5xl px-6 font-bold mb-4"
         >
           Sk
