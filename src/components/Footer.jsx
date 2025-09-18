@@ -1,4 +1,4 @@
-
+// import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { 
   ArrowUp, 
@@ -11,7 +11,6 @@ import {
   Clock
 } from 'lucide-react';
 
-// You can replace Link with your router's Link component
 const Link = ({ to, children, ...props }) => (
   <a href={to} {...props}>{children}</a>
 );
@@ -85,7 +84,7 @@ function Footer() {
   return (
     <footer className="relative w-full max-w-6xl mx-auto mt-20">
       
-      {/* Animated Divider */}
+      {/* Divider */}
       <div className="relative h-[1px] w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent my-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-1000"></div>
         <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-blue-500/50 to-transparent animate-pulse"></div>
@@ -97,7 +96,7 @@ function Footer() {
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12">
           
-          {/* Brand & Description */}
+          {/* description */}
           <div className="space-y-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 group cursor-pointer">
               <img 
@@ -127,7 +126,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* social Links */}
           <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold text-white mb-6 font-mono">Quick Links</h4>
             <ul className="space-y-3">
@@ -221,7 +220,7 @@ function Footer() {
               </div>
             </div>
 
-            {/* Scroll to Top Button */}
+            {/* to top button */}
             <button
               onClick={scrollToTop}
               className="group relative p-3 bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 text-blue-300 rounded-full hover:from-blue-600/30 hover:to-purple-600/30 hover:border-blue-400/50 hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25"
@@ -236,10 +235,10 @@ function Footer() {
           </div>
         </div>
 
-        {/* Easter Egg - Hidden Message */}
+        {/* Hidden Message */}
         <div className="text-center py-4 border-t border-gray-800/50">
           <p className="text-xs text-gray-600 font-mono hover:text-blue-400 transition-colors duration-500 cursor-default">
-            "First, solve the problem. Then, write the code." - John Johnson
+            "Code is like humor. When you have to explain it, it's bad." - Cory House
           </p>
         </div>
       </div>

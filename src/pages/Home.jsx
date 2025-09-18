@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 
-// Lazy load heavy components
 const Project = lazy(() => import('../components/Project'));
 const Skills = lazy(() => import('../components/Skill'));
 const Blog = lazy(() => import('../components/Blog'));
@@ -20,8 +19,6 @@ function Home() {
         <Blog />
         <Footer />
       </Suspense>
-      
-      {/* Your existing styles */}
     </div>
   );
 }
