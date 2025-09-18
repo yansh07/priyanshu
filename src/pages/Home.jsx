@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 
 function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-x-hidden w-full">
       <Navbar />
       <Hero />
       <Project />

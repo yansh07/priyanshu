@@ -3,7 +3,29 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
+
+body {
+  padding-right: calc(100vw - 100%);
+}
+/* Prevent horizontal overflow globally */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
