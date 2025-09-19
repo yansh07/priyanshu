@@ -66,7 +66,8 @@ function Footer() {
     { name: 'Resume', url: '/resume.pdf', external: true },
     { name: 'Projects', url: '/project', external: false },
     { name: 'Medium', url: 'https://yansh08.medium.com', external: true },
-    { name: 'Contact', url: 'mailto:pksingh69313@gmail.com', external: true }
+    { name: 'Contact', url: 'mailto:pksingh69313@gmail.com', external: true },
+    { name: 'About me', url: '/aboutme', external: true}
   ];
 
   const scrollToTop = () => {
