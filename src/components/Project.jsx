@@ -63,7 +63,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
 "
         >
           <img
-            src="/ai.jpg"
+            src="/ai.webp"
             alt="ai assistant"
             className="w-12 h-12 rounded-lg mb-3"
           />

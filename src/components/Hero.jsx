@@ -87,7 +87,7 @@ function Hero() {
               {/* meri image */}
               <div className="relative overflow-hidden rounded-2xl">
                 <img
-                  src="/pk.jpg"
+                  src="/pk.webp"
                   alt="priyanshu"
                   className="
                     w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96 object-cover

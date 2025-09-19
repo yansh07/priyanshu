@@ -24,19 +24,19 @@ const Blog = () => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
         <BlogCard
-          thumbnail="/poster3.jpg"
+          thumbnail="/poster3.webp"
           title="Convenient Morality: The Hypocrisy We All Carry."
           description="Nearly everyone is rational and open-minded towards all but one...."
           link="https://medium.com/@yansh08/convenient-morality-the-hypocrisy-we-all-carry-041e98adfa35"
         />
         <BlogCard
-          thumbnail="/poster1.jpg"
+          thumbnail="/poster1.webp"
           title="How to Use Death to Design a Life Worth Living?"
           description="You’re going to die. So what’s worth doing before you do?...."
           link="https://yansh08.medium.com/how-to-use-death-to-design-a-life-worth-living-9bf212919f16"
         />
         <BlogCard
-          thumbnail="/poster2.jpg"
+          thumbnail="/poster2.webp"
           title="Late marriages, Zero figures, and a Fertility Crisis."
           description="Motherhood at Risk: What No One Tells You About Lifestyle, Age, and Fertility...."
           link="https://medium.com/@yansh08/late-marriages-zero-figures-and-a-fertility-crisis-3437c078616e"

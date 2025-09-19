@@ -30,7 +30,7 @@ function Navbar() {
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="relative overflow-hidden rounded-lg">
             <img 
-              src="/pk.jpg" 
+              src="/pk.webp" 
               alt="priyanshu" 
               className="w-12 h-12 rounded-lg transition-transform duration-300 group-hover:scale-110" 
             />

@@ -100,7 +100,7 @@ function Footer() {
           <div className="space-y-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 group cursor-pointer">
               <img 
-                src="/pk.jpg" 
+                src="/pk.webp" 
                 alt="Priyanshu" 
                 className="w-12 h-12 rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
               />

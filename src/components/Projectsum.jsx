@@ -64,7 +64,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
 "
         >
           <img
-            src="/ai.jpg"
+            src="/ai.webp"
             alt="ai assistant"
             className="w-12 h-12 rounded-lg mb-3"
           />
@@ -107,7 +107,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
 "
         >
           <img
-            src="/pk.jpg"
+            src="/pk.webp"
             alt="portfolio website"
             className="w-12 h-12 rounded-lg mb-3"
           />
@@ -150,7 +150,7 @@ hover:rotate-3 hover:scale-105 hover:shadow-2xl
 "
         >
           <img
-            src="/logo.jpg"
+            src="/logo.webp"
             alt="ai assistant"
             className="w-12 h-12 rounded-lg mb-3"
           />
