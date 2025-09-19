@@ -31,9 +31,9 @@ const Blog = () => {
         />
         <BlogCard
           thumbnail="/poster1.jpg"
-          title="Pheromone: The Real Pervert (Backed by Biology)"
-          description="A scent drifts in. suddenly, your brain has left the programming world...."
-          link="https://medium.com/@yansh08/pheromone-the-real-pervert-backed-by-biology-905887fe2337"
+          title="How to Use Death to Design a Life Worth Living?"
+          description="You’re going to die. So what’s worth doing before you do?...."
+          link="https://yansh08.medium.com/how-to-use-death-to-design-a-life-worth-living-9bf212919f16"
         />
         <BlogCard
           thumbnail="/poster2.jpg"
