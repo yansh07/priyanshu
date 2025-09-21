@@ -42,12 +42,12 @@ const techCategories = [
 function Skills() {
   return (
     // centers everything, applies primary background
-    <div className="max-w-4xl mx-auto flex font-mono text-gray-300 min-h-screen w-full items-center justify-center backdrop-blur-2xl bg-black/20">
+    <div className="max-w-4xl mx-auto flex p-4 sm:p-8 font-mono text-gray-300 min-h-screen w-full items-center justify-center backdrop-blur-2xl bg-black/20">
       {/* main content box with the max-width constraint */}
       <div className="w-full max-w-6xl">
         <h1
-          className="pt-10 md:px-1 md:-mt-48 xl:-mt-78 font-mono bg-gradient-to-r from-blue-100 to-blue-300
-                  bg-clip-text text-transparent text-4xl xl:text-5xl px-6 font-bold mb-4"
+          className="pt-10 md:-mt-48 xl:-mt-78 font-mono bg-gradient-to-r from-blue-100 to-blue-300
+                  bg-clip-text text-transparent text-4xl sm:text-5xl font-bold mb-4"
         >
           Sk
           <span className="bg-gradient-to-r from-blue-300 to-blue-600 bg-clip-text text-transparent">

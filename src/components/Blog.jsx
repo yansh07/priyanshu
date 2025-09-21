@@ -3,7 +3,7 @@ import BlogCard from "./BlogCard";
 
 const Blog = () => {
   return (
-    <div className="max-w-4xl mx-auto relative mt-0 md:-mt-46 lg:-mt-44 xl:-mt-64">
+    <div className="max-w-4xl mx-auto relative mt-0 md:-mt-46 lg:-mt-44 xl:-mt-64 p-4 sm:p-8">
       <div>
         <h1
           className="font-mono bg-gradient-to-r from-blue-100 to-blue-300
