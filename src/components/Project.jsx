@@ -139,9 +139,9 @@ const projects = [
 //  Project Card component
 const ProjectCard = ({ project }) => (
   <div
-    className="group relative border border-white/20 backdrop-blur-2xl bg-black/20 p-6 rounded-2xl
+    className="group relative border border-white/20 backdrop-blur-xl bg-black/20 p-6 rounded-2xl
                transform transition-all duration-500 ease-in-out
-               hover:!opacity-100 hover:border-cyan-400 hover:scale-[1.03] hover:shadow-2xl"
+               lg:hover:!opacity-100 lg:hover:border-cyan-400 lg:hover:scale-[1.03] lg:hover:shadow-2xl"
   >
     <img
       src={project.icon}
@@ -150,7 +150,8 @@ const ProjectCard = ({ project }) => (
     />
     <h3 className="font-mono text-gray-200 mb-2 font-bold text-2xl">
       {project.title}
-      <span className="text-cyan-400 opacity-0 transform -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out inline-block ml-2">→</span>
+      {/* Arrow ab mobile pe by default dikhega, aur hover animation sirf large screen pe hoga */}
+      <span className="text-cyan-400 transform lg:opacity-0 lg:-translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 transition-all duration-300 ease-in-out inline-block ml-2">→</span>
     </h3>
     <p className="font-mono text-gray-400/80">{project.description}</p>
     <div className="my-4">
@@ -162,8 +163,9 @@ const ProjectCard = ({ project }) => (
         ))}
       </ul>
     </div>
+    {/* Links ab mobile pe by default visible hain! Hover effect sirf large screens ke liye. */}
     <div className="flex flex-row gap-8 justify-start mt-6 transform transition-all duration-500 ease-in-out
-                   opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                   lg:opacity-0 lg:-translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="group/link flex items-center text-gray-200 hover:text-cyan-400 transition-colors">
         <i className="fa-solid fa-arrow-up-right-from-square text-lg transform transition-transform duration-300 group-hover/link:rotate-45"></i>
         <span className="font-mono px-2">Live</span>
@@ -175,7 +177,6 @@ const ProjectCard = ({ project }) => (
     </div>
   </div>
 );
-
 
 function Project() {
   return (
