@@ -45,7 +45,7 @@ const Blog = () => {
           thumbnail="/poster4.webp"
           title="Pheromone: The Real Pervert (Backed by Biology)"
           description="A scent drifts in. suddenly, your brain is busy running a whole romantic short film..."
-          link="https://medium.com/@yansh08/late-marriages-zero-figures-and-a-fertility-crisis-3437c078616e"
+          link="https://yansh08.medium.com/pheromone-the-real-pervert-backed-by-biology-905887fe2337"
         />
       </div>
     </div>
