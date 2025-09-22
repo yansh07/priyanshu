@@ -13,7 +13,7 @@ function Hero() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-36 md:py-40 lg:ml-12 pb-8 md:pb-14">
+    <div className="min-h-screen flex items-center justify-center px-4 lg:px-0 py-36 md:py-40 pb-8 md:pb-14 max-w-4xl mx-auto">
       <section 
         className="max-w-6xl w-full relative"
         onMouseMove={handleMouseMove}
@@ -26,7 +26,7 @@ function Hero() {
           <div className="absolute top-60 left-1/3 w-1 h-1 bg-yellow-500 rounded-full animate-ping opacity-40"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  items-center">
           
           {/* Left side - name and intro */}
           <div className="space-y-6 text-center lg:text-left">

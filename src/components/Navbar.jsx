@@ -14,10 +14,10 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center max-w-4xl mx-auto px-4 md:px-8 lg:px-0 pt-4">
       <nav
         className={`
-        relative border border-gray-500/30 max-w-4xl w-full
+        relative border border-gray-500/30  w-full
         flex items-center justify-between rounded-2xl p-3
         backdrop-blur-xl bg-black/20 transition-all duration-500 ease-out
         ${
