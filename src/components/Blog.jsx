@@ -37,9 +37,9 @@ const Blog = () => {
         />
         <BlogCard
           thumbnail="/poster2.webp"
-          title="Late marriages, Zero figures, and a Fertility Crisis."
-          description="Motherhood at Risk: What No One Tells You About Lifestyle, Age, and Fertility...."
-          link="https://medium.com/@yansh08/late-marriages-zero-figures-and-a-fertility-crisis-3437c078616e"
+          title="From Algorithms to Existence: Why Purpose Matters More Than You Think"
+          description="Why do we need purpose, even when life has none. Why build “purpose” when it’s only an illusion?...."
+          link="https://medium.com/@yansh08/from-algorithms-to-existence-why-purpose-matters-more-than-you-think-17960cc0f9b6"
         />
         <BlogCard
           thumbnail="/poster4.webp"
