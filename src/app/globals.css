@@ -56,3 +56,16 @@ html, body {
   background: #3b82f6;
   color: white;
 }
+
+/* @layer base {
+  body {
+    @apply min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-x-hidden w-full;
+  }
+} */
+body {
+  min-height: 100vh;
+  /* background-image: linear-gradient(to bottom right, #111827, #000000, #111827); */
+  background: rgb(6, 0, 16);
+  overflow-x: hidden;
+  width: 100%;
+}

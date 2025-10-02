@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+'use client';
+
+import React, {useState, useEffect} from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 // Enhanced Navbar Component
-function Navbar() {
+const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,17 +37,20 @@ function Navbar() {
         {/* Logo Section with Hover Animation */}
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="relative overflow-hidden rounded-lg">
-            <Link to="/aboutme">
-              <img
+            <Link href="/aboutme">
+              <Image
                 src="/pk.webp"
                 alt="priyanshu"
-                className="w-12 h-12 rounded-lg transition-transform duration-300 group-hover:scale-110"
+                width={48}
+                height={48}
+                priority={true}
+                className="rounded-lg transition-transform duration-300 group-hover:scale-110"
               />
             </Link>
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           </div>
 
-          <span className="font-[satoshi] text-gray-200 font-semibold text-xl md:text-2xl xl:text-3xl tracking-tight group-hover:text-white transition-colors duration-300">
+          <span className="font-mono text-gray-200 font-semibold text-xl md:text-2xl xl:text-3xl tracking-tight group-hover:text-white transition-colors duration-300">
             <span className="inline-block group-hover:animate-pulse">P</span>
             <span
               className="inline-block group-hover:animate-pulse"
@@ -98,7 +104,7 @@ function Navbar() {
         </div>
 
         {/* Resume Button with Enhanced Animations */}
-        <a href="/resume.pdf" target="_blank" className="group relative">
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="group relative">
           <span
             className="
             font-[satoshi] text-gray-300 font-medium text-lg md:text-xl
@@ -117,7 +123,7 @@ function Navbar() {
             after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300
           "
           >
-            <span className="relative z-10 flex items-center gap-2">
+            <span className="relative z-10 flex items-center gap-2 font-mono">
               Resume
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                 →

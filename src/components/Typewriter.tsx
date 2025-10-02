@@ -1,30 +1,34 @@
-import { TypeAnimation } from 'react-type-animation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
+
+const phrases = ["& Writer", "& Thinker", "& Developer"];
 
 function HeroTitle() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const phrases = ['& Writer', '& Thinker', '& Developer'];
 
   useEffect(() => {
     const currentPhrase = phrases[currentIndex];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (text.length < currentPhrase.length) {
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting) {
+      if (text.length < currentPhrase.length) {
+        timeout = setTimeout(() => {
           setText(currentPhrase.slice(0, text.length + 1));
-        } else {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
+        }, 100);
       } else {
-        if (text.length > 0) {
-          setText(text.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentIndex((currentIndex + 1) % phrases.length);
-        }
+        timeout = setTimeout(() => setIsDeleting(true), 2000);
       }
-    }, isDeleting ? 50 : 100);
+    } else {
+      if (text.length > 0) {
+        timeout = setTimeout(() => {
+          setText(text.slice(0, -1));
+        }, 50);
+      } else {
+        setIsDeleting(false);
+        setCurrentIndex((prev) => (prev + 1) % phrases.length);
+      }
+    }
 
     return () => clearTimeout(timeout);
   }, [text, isDeleting, currentIndex]);
@@ -37,4 +41,4 @@ function HeroTitle() {
   );
 }
 
-export default HeroTitle
+export default HeroTitle;
