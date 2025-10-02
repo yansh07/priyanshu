@@ -181,9 +181,9 @@ I'm always excited to collaborate on interesting projects or discuss tech!
 
 <div align="center">
 
-[![Gmail](https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![Twitter Follow](https://img.shields.io/twitter/follow/yourhandle?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/yourhandle)
+[![Gmail](https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pksingh69313@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yansh08/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/yourhandle?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/yansh_08)
 
 </div>
 
