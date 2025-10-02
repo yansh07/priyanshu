@@ -134,7 +134,7 @@ const priyanshu = {
 🔹 **Smooth animations** and modern UI  
 🔹 **SEO optimized** for discoverability
 
-**Stack:** React, TailwindCSS, Formspree API
+**Stack:** React, TailwindCSS, Next.js, TypeScript
 
 </td>
 </tr>
