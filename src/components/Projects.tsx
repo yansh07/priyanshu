@@ -1,6 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom"; 
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -97,10 +98,10 @@ function Project() {
 
         <div className="group mt-10 border border-gray-700 flex flex-row items-center justify-center rounded-lg p-3 backdrop-blur-2xl bg-black/20
                         transform transition-all duration-300 hover:bg-cyan-900/50 hover:scale-105">
-            <a href="#" className="flex items-center">
+            <Link href="/projects" className="flex items-center">
               <i className="fa-brands fa-wpexplorer text-gray-200 text-xl transform transition-transform duration-300 group-hover:rotate-12"></i>
               <span className="text-gray-50 font-mono text-lg px-4">More Projects</span>
-            </a>
+            </Link>
         </div>
       </section>
     </div>

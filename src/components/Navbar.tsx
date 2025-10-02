@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <div className="relative overflow-hidden rounded-lg">
             <Link href="/aboutme">
               <Image
-                src="/pk.webp"
+                src="/pksingh.webp"
                 alt="priyanshu"
                 width={48}
                 height={48}

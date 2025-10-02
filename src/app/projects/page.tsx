@@ -22,7 +22,7 @@ const projects = [
     githubUrl: "https://github.com/yansh07/AiAssistant",
   },
   {
-    icon: "/pk.webp",
+    icon: "/pksingh.webp",
     alt: "Portfolio Website",
     title: "Portfolio Website",
     description: "Built a portfolio website using React, HTML, CSS and styled with Tailwind CSS. Deployed the website on Vercel, and Achieved 90+ Lighthouse score for performance and accessibility.",
