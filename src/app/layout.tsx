@@ -1,14 +1,36 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Mono } from "next/font/google";
 import "./globals.css";
+// import Head from "next/head";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const firaMono = Fira_Mono({ weight: '400', subsets: ['latin'], variable: '--font-fira-mono' });
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://priyanshu8.vercel.app"),
   title: "Priyanshu",
-  description: "Developer Portfolio",
+  description: "Full-Stack Developer",
+  openGraph: {
+    title: "Priyanshu",
+    description: "Full-Stack Developer",
+    url: "https://priyanshu8.vercel.app",
+    siteName: "Developer Portfolio",
+    images: [
+      {
+        url: "/bg.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Priyanshu",
+    description: "Full-Stack Developer",
+    images: ["/bg.png"], 
+  },
 };
 
 export default function RootLayout({
@@ -18,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/ghibli.webp" />
+      </head>
       <body
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >

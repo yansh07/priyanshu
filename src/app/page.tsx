@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import BlogSection from "@/components/Blogs";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Projects";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Project />
       <SkillsMatrix />
+      <BlogSection />
     </div>
   );
 }
