@@ -135,6 +135,7 @@ const Hero: React.FC = () => {
                     width={384}
                     height={384}
                     priority={true}
+                    fetchPriority="high"
                     className="
                       rounded-2xl 
                       transition-all duration-500
