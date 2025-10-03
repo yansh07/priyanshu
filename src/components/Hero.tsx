@@ -128,6 +128,7 @@ const Hero: React.FC = () => {
                   width={384}
                   height={384}
                   priority={true}
+                  fetchPriority="high"
                   className="
         w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96 
         rounded-2xl transition-all duration-500
