@@ -39,9 +39,9 @@ const Navbar: React.FC = () => {
           <div className="relative overflow-hidden rounded-lg">
             <Link href="/aboutme">
               <Image
-                src="/pksingh.webp"
+                src="/ghibli.webp"
                 alt="priyanshu"
-                width={48}
+                width={40}
                 height={48}
                 priority={true}
                 className="rounded-lg transition-transform duration-300 group-hover:scale-110"

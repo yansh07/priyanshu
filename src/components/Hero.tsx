@@ -123,14 +123,14 @@ const Hero: React.FC = () => {
               {/* meri image */}
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/pksingh.webp"
+                  src="/ghibli.webp"
                   alt="priyanshu"
                   width={384}
                   height={384}
                   className="
         w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96 
         rounded-2xl transition-all duration-500
-        group-hover:scale-105 group-hover:brightness-110 object-cover
+        group-hover:scale-105 group-hover:brightness-110 object-cover object-top
       "
                 />
 
