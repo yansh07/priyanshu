@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -122,18 +122,28 @@ const Hero: React.FC = () => {
             <div className="relative group">
               {/* meri image */}
               <div className="relative overflow-hidden rounded-2xl">
-                <Image
-                  src="/ghibli.webp"
-                  alt="priyanshu"
-                  width={384}
-                  height={384}
-                  priority
+                <div
                   className="
-        w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96 
-        rounded-2xl transition-all duration-500
-        group-hover:scale-105 group-hover:brightness-110 object-cover object-top
-      "
-                />
+                      relative 
+                      w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96
+                      group
+                    "
+                >
+                  <Image
+                    src="/ghibli.webp"
+                    alt="priyanshu"
+                    width={384}
+                    height={384}
+                    priority={true}
+                    className="
+                      rounded-2xl 
+                      transition-all duration-500
+                      group-hover:scale-105 group-hover:brightness-110 
+                      object-cover object-top
+                      "
+                    sizes="(max-width: 768px) 256px, (max-width: 1280px) 320px, 384px"
+                  />
+                </div>
 
                 {/* overlay effects */}
                 <div
