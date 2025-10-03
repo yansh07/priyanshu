@@ -88,8 +88,8 @@ function Project() {
     <div className="min-h-screen text-white p-4 sm:p-8">
       <section className="max-w-4xl mx-auto">
         <h1 className="font-mono bg-gradient-to-r from-blue-200 to-blue-400
-                       bg-clip-text text-transparent text-4xl sm:text-5xl font-bold mb-10">
-          My <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+                       bg-clip-text text-transparent text-4xl sm:text-5xl font-extrabold mb-10">
+          My <span className="font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
         </h1>
         
         <div className="grid grid-cols-1 gap-8 group/container">

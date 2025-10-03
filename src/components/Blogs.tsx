@@ -91,8 +91,8 @@ const BlogSection = () => {
   return (
     <section className="max-w-4xl mx-auto p-4 sm:p-8">
       <h1 className="font-mono bg-gradient-to-r from-blue-200 to-blue-400
-                       bg-clip-text text-transparent text-4xl sm:text-5xl font-bold mb-2 text-start">
-        My <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Musings</span>
+                       bg-clip-text text-transparent text-4xl sm:text-5xl font-extrabold mb-2 text-start">
+        My <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Musings</span>
       </h1>
       <div className='mb-10'>
         <span className='font-mono text-red-300'>Disclaimer: <span className='text-gray-300'>A peek into my curiosity-driven explorations beyond the world of code.</span></span>
