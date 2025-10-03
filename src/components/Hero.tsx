@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -127,6 +127,7 @@ const Hero: React.FC = () => {
                   alt="priyanshu"
                   width={384}
                   height={384}
+                  priority={true}
                   className="
         w-64 h-64 md:w-80 md:h-80 xl:w-96 xl:h-96 
         rounded-2xl transition-all duration-500

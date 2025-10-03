@@ -1,40 +1,38 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 
 type Blog = {
-  image: string; // IMPORTANT: Path must be relative to the `public` folder
+  image: string;
   title: string;
   description: string;
-  link: string; // The full URL to your Medium article
+  link: string;
 };
 
-// Step 2: THIS IS YOUR EDITING AREA.
-// Just update this array with your 4 latest blogs.
-// Place your images in the `public/blog/` directory.
 const blogData: Blog[] = [
   {
     image: '/poster1.webp',
-    title: 'How I Built a Killer Portfolio with Next.js',
-    description: 'A deep dive into the tech stack, design choices, and the subtle animations that make a big difference. From zero to a deployed app on Vercel.',
-    link: 'https://medium.com/@yourusername/your-article-link-1',
+    title: 'How to Use Death to Design a Life Worth Living?',
+    description: 'You’re going to die. So what’s worth doing before you do? Most people plan their bucket list for ‘someday.’ What if death makes someday now?',
+    link: 'https://yansh08.medium.com/how-to-use-death-to-design-a-life-worth-living-9bf212919f16',
   },
   {
     image: '/poster2.webp', 
-    title: 'Mastering Tailwind CSS for a Futuristic UI',
-    description: 'Stop writing messy CSS. Learn how utility-first CSS and a dark-mode-first approach can drastically speed up your development workflow.',
-    link: 'https://medium.com/@yourusername/your-article-link-2',
+    title: 'From Algorithms to Existence: Why Purpose Matters More Than You Think',
+    description: 'Why do we need purpose, even when life has none. Without purpose, even the smallest task becomes a private hell. Daily life turns into a slow, suffocating march toward death.',
+    link: 'https://yansh08.medium.com/from-algorithms-to-existence-why-purpose-matters-more-than-you-think-17960cc0f9b6',
   },
   {
     image: '/poster3.webp', 
-    title: 'Why TypeScript is a Must-Have Skill in 2025',
-    description: 'Moving from JavaScript to TypeScript felt like getting superpowers. Here’s why you should make the switch for more robust and scalable applications.',
-    link: 'https://medium.com/@yourusername/your-article-link-3',
+    title: 'Convenient Morality: The Hypocrisy We All Carry',
+    description: 'There are approximately 10,000 distinct religions practiced around the world, and nearly everyone is rational and open-minded towards all but one.',
+    link: 'https://yansh08.medium.com/convenient-morality-the-hypocrisy-we-all-carry-041e98adfa35',
   },
   {
     image: '/poster4.webp',
-    title: 'The Hidden Power of React Hooks & State Management',
-    description: 'useState and useEffect are just the beginning. Let\'s explore custom hooks and simple state management techniques without reaching for Redux.',
-    link: 'https://medium.com/@yourusername/your-article-link-4',
+    title: 'Pheromone: The Real Pervert (Backed by Biology)',
+    description: 'You’re on a bus. A scent drifts in. And suddenly, your brain has left the programming world and is busy running a whole romantic short film without your permission.',
+    link: 'https://yansh08.medium.com/pheromone-the-real-pervert-backed-by-biology-905887fe2337',
   },
 ];
 
@@ -55,7 +53,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           alt={blog.title}
           width={400}
           height={400}
-          className="object-cover transform-gpu transition-transform duration-300 ease-in-out
+          className="object-cover w-full h-full transform-gpu transition-transform duration-300 ease-in-out
                      group-hover:scale-110"
         />
       </div>

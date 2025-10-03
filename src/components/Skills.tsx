@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import {
   SiTypescript, SiJavascript, SiPython, SiCplusplus,
