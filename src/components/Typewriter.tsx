@@ -8,7 +8,6 @@ function HeroTitle() {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const currentPhrase = phrases[currentIndex];
     let timeout: NodeJS.Timeout;
@@ -35,9 +34,15 @@ function HeroTitle() {
     return () => clearTimeout(timeout);
   }, [text, isDeleting, currentIndex]);
 
+  const currentPhrase = phrases[currentIndex];
+  const remainingText = currentPhrase.slice(text.length);
+
   return (
     <div className="font-mono bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent h-12 px-18 md:px-68 lg:px-1 pt-4 text-2xl flex items-center">
-      {text}
+      
+      <span>{text}</span>
+      <span className="opacity-0">{remainingText}</span>
+
       <span className="animate-pulse ml-1">|</span>
     </div>
   );

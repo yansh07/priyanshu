@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+      rel="preload"
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >
         {children}
