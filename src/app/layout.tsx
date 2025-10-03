@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://priyanshu8.vercel.app"),
   title: "Priyanshu",
   description: "Full-Stack Developer",
+  icons: {
+    icon: "/ghibli.webp",
+  },
   openGraph: {
     title: "Priyanshu",
     description: "Full-Stack Developer",
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Priyanshu",
     description: "Full-Stack Developer",
-    images: ["/bg.png"], 
+    images: ["/bg.png"],
   },
 };
 
@@ -40,9 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/ghibli.webp" />
-      </head>
       <body
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >
