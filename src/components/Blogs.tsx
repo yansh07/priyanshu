@@ -18,9 +18,9 @@ const blogData: Blog[] = [
   },
   {
     image: '/poster2.webp', 
-    title: 'From Algorithms to Existence: Why Purpose Matters More Than You Think',
-    description: 'Why do we need purpose, even when life has none. Without purpose, even the smallest task becomes a private hell. Daily life turns into a slow, suffocating march toward death.',
-    link: 'https://yansh08.medium.com/from-algorithms-to-existence-why-purpose-matters-more-than-you-think-17960cc0f9b6',
+    title: 'The Burden of Awareness: Dostoevsky on Intelligence and Happiness',
+    description: 'Sometimes I think about how easily we used to be happy as children. A small chocolate bar or a game of cricket with friends would bring endless laughter.',
+    link: 'https://yansh08.medium.com/the-burden-of-awareness-dostoevsky-on-intelligence-and-happiness-0549a2420a33',
   },
   {
     image: '/poster3.webp', 
