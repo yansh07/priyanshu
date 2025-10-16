@@ -58,11 +58,11 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
         />
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-bold mb-2 text-gray-200 font-mono transition-colors duration-300
+        <h3 className="text-lg font-bold mb-2 text-yellow-400 font-mono transition-colors duration-300
                        group-hover:text-cyan-400">
           {blog.title}
         </h3>
-        <p className="text-sm text-gray-400 font-mono mb-4 line-clamp-3">
+        <p className="text-sm text-teal-400 font-mono mb-4 line-clamp-3">
           {blog.description}
         </p>
         <div
@@ -90,9 +90,9 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
 const BlogSection = () => {
   return (
     <section className="max-w-4xl mx-auto p-4 sm:p-8">
-      <h1 className="font-mono bg-gradient-to-r from-blue-200 to-blue-400
+      <h1 className="font-mono bg-gradient-to-r from-yellow-300 via-red-400 to-red-600
                        bg-clip-text text-transparent text-4xl sm:text-5xl font-extrabold mb-2 text-start">
-        My <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Musings</span>
+        My Musings
       </h1>
       <div className='mb-10'>
         <span className='font-mono text-red-300'>Disclaimer: <span className='text-gray-300'>A peek into my curiosity-driven explorations beyond the world of code.</span></span>

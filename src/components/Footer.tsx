@@ -123,13 +123,13 @@ const Footer: React.FC = () => {
                 height={48}
                 className="rounded-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
               />
-              <h3 className="text-2xl font-bold text-white font-mono group-hover:text-blue-400 transition-colors duration-300">
+              <h3 className="text-2xl font-bold text-yellow-400 font-mono group-hover:text-blue-400 transition-colors duration-300">
                 Priyanshu
               </h3>
             </div>
-            <p className="text-gray-400 font-mono text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+            <p className="text-teal-400 font-mono text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
               BCA 2nd year student passionate about creating digital experiences. 
-              <span className="text-blue-400"> Always learning, always coding.</span>
+              <span className="text-red-400"> Always learning, always coding.</span>
             </p>
             
             <div className="space-y-2 text-xs text-gray-500">
@@ -146,7 +146,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold text-white mb-6 font-mono">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-yellow-400 mb-6 font-mono">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li 
@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
                       href={link.url}
                       target={link.url.startsWith('http') ? '_blank' : '_self'}
                       rel={link.url.startsWith('http') ? 'noopener noreferrer' : ''}
-                      className="group inline-flex items-center gap-2 text-gray-300 hover:text-white font-mono transition-all duration-300 hover:translate-x-2"
+                      className="group inline-flex items-center gap-2 text-teal-400 hover:text-white font-mono transition-all duration-300 hover:translate-x-2"
                     >
                       <span className="w-1 h-1 bg-blue-500 rounded-full group-hover:w-2 group-hover:bg-white transition-all duration-300"></span>
                       {link.name}
@@ -181,7 +181,7 @@ const Footer: React.FC = () => {
 
           {/* Social Links */}
           <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold text-white mb-6 font-mono">Connect</h4>
+            <h4 className="text-lg font-semibold text-yellow-400 mb-6 font-mono">Connect</h4>
             <div className="grid grid-cols-2 gap-4 max-w-xs mx-auto md:mx-0">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon; 

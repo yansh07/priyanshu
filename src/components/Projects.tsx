@@ -52,14 +52,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
       alt={project.alt}
       className=" rounded-lg mb-4"
     />
-    <h3 className="font-mono text-gray-200 mb-2 font-bold text-2xl">
+    <h3 className="font-mono text-yellow-400 mb-2 font-bold text-2xl">
       {project.title}
       {/* Arrow ab mobile pe by default dikhega, aur hover animation sirf large screen pe hoga */}
       <span className="text-cyan-400 transform lg:opacity-0 lg:-translate-x-4 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 transition-all duration-300 ease-in-out inline-block ml-2">→</span>
     </h3>
-    <p className="font-mono text-gray-400/80">{project.description}</p>
+    <p className="font-mono text-teal-400">{project.description}</p>
     <div className="my-4">
-      <ul className="font-mono text-gray-300 flex flex-wrap gap-2">
+      <ul className="font-mono text-yellow-400 flex flex-wrap gap-2">
         {project.tech.map((techItem, index) => (
           <li key={index} className="backdrop-blur-2xl bg-white/10 text-xs rounded-full py-1 px-3 transform transition-transform hover:-translate-y-1">
             {techItem}
@@ -70,11 +70,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
     {/* Links ab mobile pe by default visible hain! Hover effect sirf large screens ke liye. */}
     <div className="flex flex-row gap-8 justify-start mt-6 transform transition-all duration-500 ease-in-out
                    lg:opacity-0 lg:-translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
-      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="group/link flex items-center text-gray-200 hover:text-cyan-400 transition-colors">
+      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="group/link flex items-center text-teal-400 hover:text-cyan-400 transition-colors">
         <i className="fa-solid fa-arrow-up-right-from-square text-lg transform transition-transform duration-300 group-hover/link:rotate-45"></i>
         <span className="font-mono px-2">Live</span>
       </a>
-      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="group/link flex items-center text-gray-200 hover:text-cyan-400 transition-colors">
+      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="group/link flex items-center text-teal-400 hover:text-cyan-400 transition-colors">
         <i className="fa-brands fa-github text-lg transform transition-transform duration-300 group-hover/link:scale-125"></i>
         <span className="font-mono px-2">GitHub</span>
       </a>
@@ -87,9 +87,9 @@ function Project() {
   return (
     <div className="min-h-screen text-white p-4 sm:p-8">
       <section className="max-w-4xl mx-auto">
-        <h1 className="font-mono bg-gradient-to-r from-blue-200 to-blue-400
+        <h1 className="font-mono bg-gradient-to-r from-yellow-300 via-red-400 to-red-600 
                        bg-clip-text text-transparent text-4xl sm:text-5xl font-extrabold mb-10">
-          My <span className="font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
+          My Projects
         </h1>
         
         <div className="grid grid-cols-1 gap-8 group/container">
@@ -102,7 +102,7 @@ function Project() {
                         transform transition-all duration-300 hover:bg-cyan-900/50 hover:scale-105">
             <Link href="/projects" className="flex items-center">
               <i className="fa-brands fa-wpexplorer text-gray-200 text-xl transform transition-transform duration-300 group-hover:rotate-12"></i>
-              <span className="text-gray-50 font-mono text-lg px-4">More Projects</span>
+              <span className="text-yellow-300 font-mono text-lg px-4">More Projects</span>
             </Link>
         </div>
       </section>

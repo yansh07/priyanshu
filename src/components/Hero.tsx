@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               <h1 className="font-bold text-4xl md:text-5xl xl:text-6xl font-mono leading-tight">
                 <span
                   className="
-                  bg-gradient-to-r from-white via-blue-200 to-blue-500 
+                  bg-gradient-to-r from-yellow-300 via-yellow-400 to-red-400 
                   bg-clip-text text-transparent
                   hover:bg-gradient-to-r hover:from-blue-400 hover:via-white hover:to-purple-400
                   transition-all duration-1000 ease-in-out cursor-default
