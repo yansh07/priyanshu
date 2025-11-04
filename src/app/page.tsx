@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Buttons from "@/components/Buttons";
+import TechLogo from "@/components/TechLogo";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Buttons />
       <About />
+      <TechLogo />
     </div>
   );
 }
