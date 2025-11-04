@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
                 "
     >
       {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[url('/grid.svg')] bg-[length:40px_40px]" />
+      <div className="absolute inset-0 opacity-10 bg-[length:40px_40px]" />
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col space-y-6">
