@@ -22,7 +22,7 @@ function Buttons() {
 
       {/* Book a Call */}
       <a
-        href="tel:+916203617455"
+        href={`tel:${process.env.NEXT_PHONE}`}
         className="p-2 rounded-full font-mono font-medium 
                    bg-lime-500 dark:bg-lime-400 
                    border-2 border-lime-600 dark:border-lime-500 
