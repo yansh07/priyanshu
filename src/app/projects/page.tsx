@@ -68,7 +68,8 @@ const projectsData: Project[] = [
   },
 ];
 
-function Projects({ showAll = false }: { showAll?: boolean }) {
+function Projects() {
+  const showAll = true;
   const displayedProjects = showAll ? projectsData : projectsData.slice(0, 5);
 
   return (
