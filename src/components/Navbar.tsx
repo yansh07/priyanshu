@@ -4,11 +4,11 @@ import ThemeToggle from './ThemeToggle'
 
 function Navbar() {
   return (
-    <nav className="w-full py-6 md:py-12 px-6">
-      <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center max-w-2xl mx-auto">
+    <nav className=" py-6 md:py-12 px-6 grid overflow-hidden max-w-6xl">
+      <div className="flex flex-col  sm:flex-row  max-w-2xl mx-auto gap-18">
         
         {/* Left Section (Email hidden on small screens) */}
-        <div className="hidden sm:flex items-center space-x-3">
+        <div className="hidden sm:flex  space-x-3">
           <Mail className="w-5 h-5 text-blue-600 dark:text-blue-600" />
           <span className="text-green-500">•</span>
           <a
@@ -20,7 +20,7 @@ function Navbar() {
         </div>
 
         {/* Center Section (Home + Blog) */}
-        <div className="flex w-full justify-between sm:w-auto sm:justify-center items-center gap-10 text-medium font-mono mt-4 sm:mt-0">
+        <div className="flex w-full  sm:w-auto gap-36 md:gap-10 text-medium font-mono mt-4 sm:mt-0">
           <div className="flex space-x-6">
             <a
               href="#home"
