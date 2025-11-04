@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+// import { ReactNode } from "react";
 import "./globals.css";
 // import Head from "next/head";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const firaMono = Fira_Mono({ weight: '400', subsets: ['latin'], variable: '--font-fira-mono' });
-
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const firaMono = Fira_Mono({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-fira-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://priyanshu8.vercel.app"),
@@ -42,12 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-      rel="preload"
+        rel="preload"
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
