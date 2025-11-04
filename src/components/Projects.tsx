@@ -41,38 +41,18 @@ const projectsData: Project[] = [
     title: "Friday",
     icon: "/ai.webp",
     description:
-      "Developed a voice-activated AI assistant using GPT for command processing. Automated Task Execution with Playwright.",
-    liveUrl: "https://github.com/yansh07/AiAssistant",
-    githubUrl: "https://github.com/yansh07/AiAssistant",
-    techStack: ["Python", "OpenAI", "Edge TTS", "Porcupine"],
-  },
-  {
-    id: 4,
-    title: "Portfolio",
-    icon: "/ghibli.webp",
-    description:
-      "Built a portfolio website using React.js, Next.js, TypeScript and styled with Tailwind CSS.",
-    liveUrl: "https://priyanshu8.vercel.app/",
-    githubUrl: "https://github.com/yansh07/priyanshu/",
-    techStack: ["Next.js", "Typescript", "TailwindCSS", "Vercel"],
-  },
-  {
-    id: 5,
-    title: "Nimbus",
-    icon: "/logo.webp",
-    description:
-      "A simple and responsive weather application built with React.js + Vite + Tailwind CSS.",
-    liveUrl: "https://chaiandrain.vercel.app/",
-    githubUrl: "https://github.com/yansh07/weather-app",
-    techStack: ["React.js", "OpenWeather API", "JavaScript", "Node.js"],
+      "A magical way to shorten your long url, into a small, portable piece of line.",
+    liveUrl: "https://shortleepro.vercel.app/",
+    githubUrl: "https://github.com/yansh07/shortly/",
+    techStack: ["Next.js", "PostgreSQL", "Typescript", "Prisma"],
   },
 ];
 
 function Projects({ showAll = false }: { showAll?: boolean }) {
-  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 5);
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 2);
 
   return (
-    <div className="p-4 items-center justify-items-center mx-auto max-w-lg py-4  grid overflow-hidden">
+    <div className="py-4 px-6 max-w-lg grid md:px-0 overflow-hidden w-full">
       <div>
         <h1 className="dark:text-white font-mono font-bold text-xl md:text-3xl mb-8">
           Projects
@@ -198,6 +178,33 @@ function Projects({ showAll = false }: { showAll?: boolean }) {
             </motion.div>
           ))}
         </div>
+
+        {/* View All Projects Link (only show on home page) */}
+        {!showAll && projectsData.length > 2 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="mt-8"
+          >
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-sm font-mono font-medium dark:text-blue-400 text-blue-600 hover:underline underline-offset-4 group"
+            >
+              <span>View all projects</span>
+              <motion.div
+                animate={{ x: [0, 5, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+              >
+                <ArrowRightFromLine className="w-4 h-4" />
+              </motion.div>
+            </Link>
+          </motion.div>
+        )}
       </div>
     </div>
   );

@@ -135,27 +135,20 @@ const techLogos = [
   },
 ];
 
-// Alternative with image sources
-// const imageLogos = [
-//   { src: "/logos/company1.png", alt: "Company 1", href: "https://company1.com" },
-//   { src: "/logos/company2.png", alt: "Company 2", href: "https://company2.com" },
-//   { src: "/logos/company3.png", alt: "Company 3", href: "https://company3.com" },
-// ];
-
 function TechLogo() {
   return (
     <div className="py-8  grid max-w-lg overflow-hidden px-6 md:px-0">
-      <h1 className="dark:text-gray-300 font-mono font-bold text-xl md:text-3xl mb-8">
+      <h1 className="dark:text-white font-mono font-bold text-xl md:text-3xl mb-8">
         Skills
       </h1>
       <div
-        style={{ height: "200px", position: "relative", overflow: "hidden" }}
+        style={{ position: "relative", overflow: "hidden" }}
       >
         <LogoLoop
           logos={techLogos}
           speed={120}
           direction="left"
-          logoHeight={48}
+          logoHeight={35}
           gap={40}
           pauseOnHover
           scaleOnHover

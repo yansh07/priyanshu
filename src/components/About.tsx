@@ -10,7 +10,7 @@ function About() {
       className="relative px-8 overflow-hidden py-6 md:py-4 grid bg-transparent"
     >
       <div className="max-w-lg space-y-4">
-        <h2 className="text-xl md:text-3xl font-bold text-gray-800 dark:text-gray-300 font-mono">
+        <h2 className="text-xl md:text-3xl font-bold text-gray-800 dark:text-white font-mono">
           About Me
         </h2>
         <p className="text-gray-600 dark:text-gray-400 font-mono text-base md:text-lg leading-relaxed">

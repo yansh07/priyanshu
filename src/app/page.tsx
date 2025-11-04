@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Buttons from "@/components/Buttons";
 import TechLogo from "@/components/TechLogo";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Buttons />
       <About />
       <TechLogo />
+      <Projects />
+      <Contact />
     </div>
   );
 }
