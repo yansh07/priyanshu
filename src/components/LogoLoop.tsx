@@ -7,9 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-// 1. 'next/image' ko hata diya hai kyunki yeh build environment error de raha hai
-// Apne local Next.js project mein isko wapas add kar lena
-// import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export type LogoItem =
   | {
@@ -19,8 +17,7 @@ export type LogoItem =
       ariaLabel?: string;
     }
   | {
-      // 2. 'StaticImageData' ko hata diya hai
-      src: string; // FIX: Allow StaticImageData for local imports
+      src: string | StaticImageData;
       alt?: string;
       href?: string;
       title?: string;
@@ -31,7 +28,6 @@ export type LogoItem =
     };
 
 export interface LogoLoopProps {
-  // ... (Props remain the same)
   logos: LogoItem[];
   speed?: number;
   direction?: "left" | "right";
@@ -46,9 +42,6 @@ export interface LogoLoopProps {
   className?: string;
   style?: React.CSSProperties;
 }
-
-// ... (All hooks like ANIMATION_CONFIG, toCssLength, cx, useResizeObserver, useImageLoader, useAnimationLoop remain exactly the same)
-// ... (Scrolling past all the hooks...)
 
 const ANIMATION_CONFIG = {
   SMOOTH_TAU: 0.25,
@@ -299,15 +292,9 @@ export const LogoLoop = React.memo<LogoLoopProps>(
     const handleMouseLeave = useCallback(() => {
       if (pauseOnHover) setIsHovered(false);
     }, [pauseOnHover]);
-
-    //
-    // --- 💡💡💡 YEH HAI MAIN FIX 💡💡💡 ---
-    //
     const renderLogoItem = useCallback(
       (item: LogoItem, key: React.Key) => {
-        // FIX 1: Use proper type guard 'in' operator
         if ("node" in item) {
-          // This is a React.ReactNode item
           const content = (
             <span
               className={cx(
@@ -357,17 +344,10 @@ export const LogoLoop = React.memo<LogoLoopProps>(
           );
         }
 
-        // FIX 2: Use proper type guard 'in' operator
         if ("src" in item) {
-          // This is an Image item
           const content = (
             <>
-              {/* --- 💡 DEV NOTE 💡 ---
-                Neeche wala <img /> tag sirf is preview environment ke liye hai taaki code compile ho.
-                Apne real Next.js project mein, 'next/image' ko import karein aur 
-                is <img /> tag ko neeche wale commented <Image /> component se replace kar dein.
-              */}
-              <img
+              {/* <img
                 className={cx(
                   "h-[var(--logoloop-logoHeight)] w-auto block object-contain",
                   "pointer-events-none",
@@ -381,13 +361,8 @@ export const LogoLoop = React.memo<LogoLoopProps>(
                 alt={item.alt ?? item.title ?? "logo"}
                 title={item.title}
                 loading="lazy"
-              />
+              /> */}
 
-              {/* --- 🟢 YEH CODE APNE NEXT.JS PROJECT MEIN USE KAREIN 🟢 ---
-                (Upar wala <img /> delete kar dena)
-                
-              import Image, { StaticImageData } from "next/image";
-              (aur LogoItem type mein 'src: string | StaticImageData' bhi kar dena)
 
               <Image
                 className={cx(
@@ -398,15 +373,13 @@ export const LogoLoop = React.memo<LogoLoopProps>(
                   scaleOnHover &&
                     "transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/item:scale-120"
                 )}
-                // FIX 3: Access props directly, no more '(item as any)'
                 src={item.src}
                 alt={item.alt ?? item.title ?? "logo"}
                 title={item.title}
-                width={item.width ?? 100} // Default width if not provided
-                height={item.height ?? 50} // Default height if not provided
+                width={item.width ?? 100} 
+                height={item.height ?? 50} 
                 sizes={item.sizes}
               />
-              */}
             </>
           );
 
@@ -444,8 +417,6 @@ export const LogoLoop = React.memo<LogoLoopProps>(
             </li>
           );
         }
-
-        // Fallback agar item ka type match na ho
         return null;
       },
       [scaleOnHover]
