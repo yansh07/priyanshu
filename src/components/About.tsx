@@ -7,7 +7,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative px-8 overflow-hidden py-12 md:py-18 grid bg-transparent"
+      className="relative px-8 overflow-hidden py-6 md:py-4 grid bg-transparent"
     >
       <div className="max-w-lg space-y-4">
         <h2 className="text-xl md:text-3xl font-bold text-gray-800 dark:text-gray-300 font-mono">
