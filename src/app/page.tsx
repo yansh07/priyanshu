@@ -6,6 +6,7 @@ import Buttons from "@/components/Buttons";
 import TechLogo from "@/components/TechLogo";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Blog from "@/components/Blog";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <About />
       <TechLogo />
       <Projects />
+      <Blog />
       <Contact />
     </div>
   );
