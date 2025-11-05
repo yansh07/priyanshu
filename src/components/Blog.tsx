@@ -42,7 +42,7 @@ function Blog({ showAll = false }: { showAll?: boolean }) {
   return (
     <div className='py-4 px-6 max-w-lg grid md:px-0 overflow-hidden w-full'>
         <div>
-            <h1 className='dark:text-white font-mono font-bold text-xl md:text-3xl mb-8'>Blog</h1>
+            <h1 className='dark:text-white font-mono font-bold text-xl md:text-3xl mb-8'>Blogs</h1>
         </div>
         {/* Projects Grid */}
         <div className="space-y-6">
@@ -52,7 +52,6 @@ function Blog({ showAll = false }: { showAll?: boolean }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
               className="relative group"
             >
               {/* Animated border gradient */}

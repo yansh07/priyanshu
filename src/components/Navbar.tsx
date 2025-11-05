@@ -29,7 +29,7 @@ function Navbar() {
               Home
             </a>
             <a
-              href="#blog"
+              href="https://medium.com/@yansh08"
               className="transition-colors dark:text-gray-200 text-gray-800 hover:font-bold"
             >
               Blog
