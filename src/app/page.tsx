@@ -19,19 +19,18 @@ export default function Home() {
                  "
     >
       {/* Dynamic space background component */}
-      <div className="absolute inset-0 z-0 opacity-80" style={{ backgroundImage: 'url("/path/to/clean-space-bg.jpg")', backgroundSize: 'cover', backgroundAttachment: 'fixed' }} />
-      {/* For a particle background, replace the above div with a dedicated ParticleBackground component */}
+      <div className="absolute inset-0 z-0 opacity-80" style={{ backgroundSize: 'cover', backgroundAttachment: 'fixed' }} />
 
-      <div className="relative z-10"> {/* Content wrapper to sit above background */}
-        <Navbar />
+      <div className="relative z-10"> 
+        {/* <Navbar /> */}
         <SidebarNavigation />
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <Blog /> {/* <--- Render this! */}
-        <Contact /> {/* <--- Render this! */}
-        <Footer /> {/* <--- Render this! */}
+        <Blog /> 
+        <Contact /> 
+        <Footer /> 
       </div>
     </div>
   );

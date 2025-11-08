@@ -2,22 +2,47 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Prism from "./Prism";
 
 const Hero: React.FC = () => {
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const buttonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 100, delay: 1.2 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", stiffness: 100, delay: 1.2 },
+    },
     hover: { scale: 1.05, boxShadow: "0px 0px 8px rgba(0,255,255,0.7)" },
     tap: { scale: 0.95 },
   };
 
   return (
-    <section id="home" className="relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center px-4">
+    <section
+      id="home"
+      className="relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center px-4"
+    >
+      <div style={{ width: "100%", height: "100%", position: "absolute"}} className="min-h-screen">
+        <Prism
+          animationType="rotate"
+          timeScale={0.5}
+          height={3.5}
+          baseWidth={5.5}
+          scale={3.6}
+          hueShift={0}
+          colorFrequency={1}
+          noise={0.5}
+          glow={1}
+        />
+      </div>
       <div className="relative z-10 flex flex-col space-y-6 max-w-4xl mx-auto">
         {/* Avatar */}
         <motion.div
@@ -74,7 +99,7 @@ const Hero: React.FC = () => {
             animate="visible"
             whileHover="hover"
             whileTap="tap"
-            className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan-500 text-cyan-300 text-lg font-medium 
+            className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan-500 text-cyan-800 text-lg font-medium 
                        hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-lg"
           >
             View Resume
