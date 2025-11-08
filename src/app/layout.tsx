@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Mono } from "next/font/google";
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "./providers";
 // import { ReactNode } from "react";
 import "./globals.css";
 // import Head from "next/head";
@@ -52,7 +53,7 @@ export default function RootLayout({
         rel="preload"
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>

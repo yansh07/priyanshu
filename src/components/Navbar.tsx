@@ -1,49 +1,56 @@
-import React from 'react'
-import { Mail } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
+'use client';
+import React from 'react';
+import { Mail, Moon, Sun } from 'lucide-react';
+import ThemeToggle from './ThemeToggle'; 
+import { motion } from 'framer-motion';
 
 function Navbar() {
   return (
-    <nav className=" py-6 md:py-12 px-6 grid overflow-hidden max-w-6xl">
-      <div className="flex flex-col  sm:flex-row  max-w-2xl mx-auto gap-18">
-        
-        {/* Left Section (Email hidden on small screens) */}
-        <div className="hidden sm:flex  space-x-3">
-          <Mail className="w-5 h-5 text-blue-600 dark:text-blue-600" />
-          <span className="text-green-500">•</span>
-          <a
-            href="mailto:pksingh69313@gmail.com"
-            className="text-sm font-mono underline underline-offset-4 transition-colors text-gray-800 dark:text-white/50"
-          >
-            pksingh69313@gmail.com
-          </a>
-        </div>
-
-        {/* Center Section (Home + Blog) */}
-        <div className="flex w-full  sm:w-auto gap-36 md:gap-10 text-medium font-mono mt-4 sm:mt-0">
-          <div className="flex space-x-6">
-            <a
-              href="#home"
-              className="transition-colors dark:text-gray-200 text-gray-800 hover:font-bold"
-            >
-              Home
-            </a>
-            <a
-              href="https://medium.com/@yansh08"
-              className="transition-colors dark:text-gray-200 text-gray-800 hover:font-bold"
-            >
-              Blog
-            </a>
-          </div>
-
-          {/* Right Section (Theme Toggle) */}
-          <div className="sm:ml-8">
-            <ThemeToggle />
-          </div>
-        </div>
+    <motion.nav 
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+      className="relative z-20 w-full px-6 py-4 md:py-6 flex justify-between items-center max-w-7xl mx-auto"
+    >
+      {/* Left Section (Email and Logo) */}
+      <div className="flex items-center space-x-4">
+        <motion.a
+          href="mailto:pksingh69313@gmail.com"
+          className="text-sm font-mono text-gray-400 hover:text-cyan-400 transition-colors flex items-center gap-2"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Mail className="w-4 h-4 text-cyan-500" />
+          <span className="hidden sm:inline">pksingh69313@gmail.com</span>
+        </motion.a>
+        {/* <motion.div className="font-bold text-xl text-white">Priyanshu</motion.div> */}
       </div>
-    </nav>
-  )
+
+      {/* Right Section (Home, Blog, Theme Toggle) */}
+      <div className="flex items-center space-x-6 md:space-x-10">
+        <motion.a
+          href="#home"
+          className="text-lg font-semibold text-gray-300 hover:text-white transition-colors relative"
+          whileHover={{ y: -2 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
+          Home
+          <span className="absolute left-0 bottom-0 h-[2px] bg-cyan-500 w-0 hover:w-full transition-all duration-300 ease-out" />
+        </motion.a>
+        <motion.a
+          href="https://medium.com/@yansh08"
+          className="text-lg font-semibold text-gray-300 hover:text-white transition-colors relative"
+          whileHover={{ y: -2 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
+          Blog
+          <span className="absolute left-0 bottom-0 h-[2px] bg-cyan-500 w-0 hover:w-full transition-all duration-300 ease-out" />
+        </motion.a>
+
+        <ThemeToggle /> 
+      </div>
+    </motion.nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

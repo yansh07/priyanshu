@@ -1,29 +1,38 @@
+'use client';
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
-import Buttons from "@/components/Buttons";
-import TechLogo from "@/components/TechLogo";
+import Skills from "@/components/Skills"; 
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
-import Footer from "@/components/Footer";
+import Contact from "@/components/Contact"; 
+import Footer from "@/components/Footer"; 
+import SidebarNavigation from "@/components/SidebarNavigation";
 
 export default function Home() {
   return (
     <div
-      className="justify-items-center absolute inset-0 min-h-screen overflow-x-hidden w-full transition-colors duration-700 
-                bg-[linear-gradient(to_top,_#dbeafe,_#e0f2fe,_#f0f9ff)]
-                dark:bg-[radial-gradient(ellipse_at_top,_#003566_0%,_#060000_70%)]"
+      className="relative min-h-screen overflow-x-hidden w-full 
+                 bg-gradient-to-br from-[#060000] to-blue-950 dark:from-white/50 dark:blue-300 
+                 text-gray-200 dark:text-gray-50 
+                 font-sans // Using a clean sans-serif as base
+                 "
     >
-      <Navbar />
-      <Hero />
-      <Buttons />
-      <About />
-      <TechLogo />
-      <Projects />
-      <Blog />
-      <Contact />
-      <Footer />
+      {/* Dynamic space background component */}
+      <div className="absolute inset-0 z-0 opacity-80" style={{ backgroundImage: 'url("/path/to/clean-space-bg.jpg")', backgroundSize: 'cover', backgroundAttachment: 'fixed' }} />
+      {/* For a particle background, replace the above div with a dedicated ParticleBackground component */}
+
+      <div className="relative z-10"> {/* Content wrapper to sit above background */}
+        <Navbar />
+        <SidebarNavigation />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Blog /> {/* <--- Render this! */}
+        <Contact /> {/* <--- Render this! */}
+        <Footer /> {/* <--- Render this! */}
+      </div>
     </div>
   );
 }
