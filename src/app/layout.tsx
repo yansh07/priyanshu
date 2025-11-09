@@ -51,7 +51,9 @@ export default function RootLayout({
         rel="preload"
         className={`${inter.variable} ${firaMono.variable} antialiased`}
       >
-          {children}
+          <div className="bg-gradient-to-br from-[#060000] to-blue-950">
+            {children}
+          </div>
       </body>
     </html>
   );

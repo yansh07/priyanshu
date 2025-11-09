@@ -14,7 +14,7 @@ export default function Home() {
       className="relative min-h-screen overflow-x-hidden w-full 
                  bg-gradient-to-br from-[#060000] to-blue-950 
                  text-gray-200
-                 font-sans // Using a clean sans-serif as base
+                 font-sans
                  "
     >
       {/* Dynamic space background component */}

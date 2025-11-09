@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
 
   return (
     <motion.section
-      className="relative z-10 py-20 px-4 max-w-6xl mx-auto"
+      className="relative z-10 px-4 max-w-6xl mx-auto"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

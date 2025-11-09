@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, Github } from "lucide-react";
+import { Link } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 
 interface ProjectProps {
   title: string;
@@ -32,7 +33,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="bg-gradient-to-br dark:from-gray-800/40 dark:to-black/40 from-gray-400 to-blue-300 border border-gray-700/50 rounded-lg p-6 flex flex-col md:flex-row gap-6 shadow-xl relative overflow-hidden"
+      className="bg-gradient-to-br from-gray-800/40 to-black/40 border border-gray-700/50 rounded-lg p-6 flex flex-col md:flex-row gap-6 shadow-xl relative overflow-hidden"
     >
 
       <div
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       >
         <div>
           <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
-          <p className="text-gray-800 dark:text-gray-400 mb-4">{description}</p>
+          <p className="text-gray-400 mb-4">{description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {techStack.map((tech, index) => (
               <span
@@ -75,7 +76,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Github className="w-4 h-4" /> GitHub
+              <SiGithub className="w-4 h-4" /> GitHub
             </motion.a>
           )}
         </div>
@@ -152,7 +153,7 @@ const Projects: React.FC = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.h2
-        className="text-4xl font-bold text-black dark:text-white text-center mb-12"
+        className="text-4xl font-bold text-white dark:text-white text-center mb-12"
         variants={itemVariants}
       >
         Projects

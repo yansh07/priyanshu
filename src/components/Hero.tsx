@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center"
+      className="relative z-10 min-h-[calc(100vh)] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center"
       style={{ backgroundImage: "url('/bgbg.jpg')" }}
     >
       <div className="absolute inset-0 bg-black/10"></div>
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
         </h1>
 
         {/* Subtext */}
-        <h2 className="backdrop-blur-xs font-light text-2xl md:text-4xl text-gray-300">
+        <h2 className="backdrop-blur-xs font-bold text-2xl md:text-4xl text-gray-300">
           I{" "}
           <span className="font-semibold bg-gradient-to-r from-white to-yellow-400 bg-clip-text text-transparent">
             Engineer the Invisible
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan-500 text-cyan-800 text-lg font-medium 
+            className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan-500 text-cyan-400 text-lg font-medium 
                        hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-lg"
           >
             View Resume
