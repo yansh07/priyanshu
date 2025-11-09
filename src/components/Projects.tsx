@@ -163,7 +163,7 @@ const Projects: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {projectsData.map((project, index) => (
-          <ProjectCard key={index} {...project} variants={itemVariants} />
+          <ProjectCard key={index} {...project} />
         ))}
       </div>
 
