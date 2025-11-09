@@ -1,9 +1,16 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, Github } from "lucide-react";
+import { Link } from "lucide-react";
 import Image from "next/image";
+import { SiGithub } from "react-icons/si";
 
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50, damping: 10 } },
+  hover: { scale: 1.03, boxShadow: "0px 0px 20px rgba(0,255,255,0.4)" },
+};
 interface ProjectProps {
   title: string;
   description: string;
@@ -11,6 +18,7 @@ interface ProjectProps {
   liveLink?: string;
   githubLink?: string;
   image?: string;
+  variants?: typeof itemVariants;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -21,19 +29,19 @@ const ProjectCard: React.FC<ProjectProps> = ({
   githubLink,
   image,
 }) => {
-  const cardVariants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 50, damping: 10 },
+      transition: { type: "spring" as const, stiffness: 50, damping: 10 },
     },
     hover: { scale: 1.03, boxShadow: "0px 0px 20px rgba(0,255,255,0.4)" },
   };
 
   return (
     <motion.div
-      variants={cardVariants}
+      variants={itemVariants}
       whileHover="hover"
       className="bg-gradient-to-br from-gray-800/40 to-black/40 border border-gray-700/50 rounded-lg p-6 flex flex-col md:flex-row gap-6 shadow-xl relative overflow-hidden"
     >
@@ -92,7 +100,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Github className="w-4 h-4" /> GitHub
+              <SiGithub className="w-4 h-4" /> GitHub
             </motion.a>
           )}
         </div>
@@ -155,7 +163,7 @@ const Projects: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {projectsData.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} variants={itemVariants} />
         ))}
       </div>
 
