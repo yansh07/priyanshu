@@ -5,26 +5,6 @@ import { motion } from "framer-motion";
 import Prism from "./Prism";
 
 const Hero: React.FC = () => {
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { type: "spring", stiffness: 100, delay: 1.2 },
-    },
-    hover: { scale: 1.05, boxShadow: "0px 0px 8px rgba(0,255,255,0.7)" },
-    tap: { scale: 0.95 },
-  };
-
   return (
     <section
       id="home"
@@ -62,10 +42,9 @@ const Hero: React.FC = () => {
 
         {/* Heading */}
         <motion.h1
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.7 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
           className="font-bold text-4xl md:text-6xl text-white flex flex-col items-center gap-2"
         >
           Hi, I&apos;m{" "}
@@ -76,10 +55,9 @@ const Hero: React.FC = () => {
 
         {/* Subtext */}
         <motion.h2
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.9 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
           className="font-light text-2xl md:text-4xl text-gray-300"
         >
           I{" "}
@@ -94,11 +72,11 @@ const Hero: React.FC = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
-            whileTap="tap"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0,255,255,0.7)" }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 100, delay: 1.2 }}
             className="px-8 py-3 rounded-full bg-transparent border-2 border-cyan-500 text-cyan-800 text-lg font-medium 
                        hover:bg-cyan-500 hover:text-white transition-all duration-300 shadow-lg"
           >
@@ -106,11 +84,11 @@ const Hero: React.FC = () => {
           </motion.a>
           <motion.a
             href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
-            whileTap="tap"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0,255,255,0.7)" }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 100, delay: 1.2 }}
             className="px-8 py-3 rounded-full bg-blue-600 text-white text-lg font-medium 
                        hover:bg-blue-700 transition-all duration-300 shadow-lg"
           >

@@ -7,7 +7,7 @@ import { PiCoffeeBold } from 'react-icons/pi';
 const Footer: React.FC = () => {
   const footerVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50, delay: 0.2 } },
+    visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 50, delay: 0.2 } },
   };
 
   return (

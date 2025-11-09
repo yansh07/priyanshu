@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Transition } from 'framer-motion';
 import { User, Folder, MessageSquare } from 'lucide-react';
 import { SiGithub, SiGmail } from 'react-icons/si';
 import ThemeToggle from './ThemeToggle';
@@ -33,7 +33,15 @@ const NavItem: React.FC<NavItemProps> = ({ href, Icon, label }) => {
 const SidebarNavigation: React.FC = () => {
   const sidebarVariants = {
     hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 100, delay: 0.8, staggerChildren: 0.1 } },
+    visible: { 
+      x: 0, 
+      opacity: 1, 
+      transition: { 
+        ease: [0.6, -0.05, 0.01, 0.99] as Transition["ease"],
+        duration: 0.8, 
+        staggerChildren: 0.1 
+      } 
+    },
   };
 
   return (

@@ -13,10 +13,9 @@ const About: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 50,
         delay: 0.3,
-        when: "beforeChildren",
         staggerChildren: 0.2,
       },
     },
