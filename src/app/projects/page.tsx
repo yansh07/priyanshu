@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, Github } from "lucide-react";
-import Image from "next/image";
 
 interface ProjectProps {
   title: string;
@@ -10,7 +9,6 @@ interface ProjectProps {
   techStack: string[];
   liveLink?: string;
   githubLink?: string;
-  image?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -19,7 +17,6 @@ const ProjectCard: React.FC<ProjectProps> = ({
   techStack,
   liveLink,
   githubLink,
-  image,
 }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -35,28 +32,15 @@ const ProjectCard: React.FC<ProjectProps> = ({
     <motion.div
       variants={cardVariants}
       whileHover="hover"
-      className="bg-gradient-to-br from-gray-800/40 to-black/40 border border-gray-700/50 rounded-lg p-6 flex flex-col md:flex-row gap-6 shadow-xl relative overflow-hidden"
+      className="bg-gradient-to-br dark:from-gray-800/40 dark:to-black/40 from-gray-400 to-blue-300 border border-gray-700/50 rounded-lg p-6 flex flex-col md:flex-row gap-6 shadow-xl relative overflow-hidden"
     >
-      {image && (
-        <div className="absolute inset-0 -z-10 overflow-hidden rounded-lg">
-          <Image
-            src={image}
-            alt={`${title} preview`}
-            fill
-            className="object-cover opacity-30 blur-[1px] transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/80" />
-        </div>
-      )}
 
       <div
-        className={`${
-          image ? "md:w-2/3" : "w-full"
-        } flex flex-col justify-between`}
+        className={`flex flex-col justify-between`}
       >
         <div>
           <h3 className="text-2xl font-semibold text-white mb-2">{title}</h3>
-          <p className="text-gray-400 mb-4">{description}</p>
+          <p className="text-gray-800 dark:text-gray-400 mb-4">{description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {techStack.map((tech, index) => (
               <span
@@ -109,7 +93,6 @@ const Projects: React.FC = () => {
       techStack: ["React.js", "Express.js", "Node.js", "MongoDB"],
       liveLink: "https://planitfirst.vercel.app/",
       githubLink: "https://github.com/yansh07/todo-frontend/",
-      image: "/planit.webp",
     },
     {
       title: "Shortly",
@@ -118,7 +101,6 @@ const Projects: React.FC = () => {
       techStack: ["Next.js", "PostgreSQL", "TypeScript", "Prisma"],
       liveLink: "https://shortleepro.vercel.app/",
       githubLink: "https://github.com/yansh07/shortly/",
-      image: "/shortlee.webp",
     },
     {
       title: "Friday",
@@ -127,7 +109,6 @@ const Projects: React.FC = () => {
       techStack: ["Python", "OpenAI", "Porcupine", "Edge TTS"],
       liveLink: "https://github.com/yansh07/aiassistant/",
       githubLink: "https://github.com/yansh07/aiassistant/",
-      image: "/ai.webp",
     },
     {
       title: "Nimbus",
@@ -136,7 +117,6 @@ const Projects: React.FC = () => {
       techStack: ["React.js", "OpenWeatherMap API", "Tailwind CSS", "Javascript"],
       liveLink: "https://chaiandrain.vercel.app/",
       githubLink: "https://github.com/yansh07/weather-app",
-      image: "/logo.webp",
     },
     {
       title: "Portfolio",
@@ -145,7 +125,6 @@ const Projects: React.FC = () => {
       techStack: ["Next.js", "Tailwind CSS", "TypeScript", "React.js"],
       liveLink: "https://priyanshu8.vercel.app/",
       githubLink: "https://github.com/yansh07/priyanshu/",
-      image: "/ghibli.webp",
     },
   ];
 

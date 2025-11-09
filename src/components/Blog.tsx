@@ -3,7 +3,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { ExternalLink } from 'lucide-react'; 
-import Image from 'next/image';
 
 interface BlogPostProps {
   title: string;
@@ -11,7 +10,7 @@ interface BlogPostProps {
   link: string;
   image?: string;
 }
-const BlogPostCard: React.FC<BlogPostProps> = ({ title, description, link, image }) => {
+const BlogPostCard: React.FC<BlogPostProps> = ({ title, description, link }) => {
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 50, damping: 10 } },
@@ -27,11 +26,6 @@ const BlogPostCard: React.FC<BlogPostProps> = ({ title, description, link, image
       whileHover="hover"
       className="bg-gradient-to-br from-gray-800/40 to-black/40 border border-gray-700/50 rounded-lg p-6 flex flex-col shadow-xl overflow-hidden cursor-pointer group"
     >
-      {image && (
-        <div className="relative h-40 w-full mb-4 rounded-md overflow-hidden border border-gray-600">
-          <Image src={image} alt={`${title} image`} layout="fill" objectFit="cover" className="group-hover:scale-105 transition-transform duration-300" />
-        </div>
-      )}
       <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{title}</h3>
       <p className="text-gray-400 mb-4 flex-grow">{description}</p>
       <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-200 transition-colors">
@@ -47,13 +41,11 @@ const Blog: React.FC = () => {
       title: 'How to Use Death to Design a Life Worth Living?',
       description: 'You’re going to die. So what’s worth doing before you do? Most people plan their bucket list for ‘someday.’ What if death makes someday now?',
       link: 'https://medium.com/@yansh08/how-to-use-death-to-design-a-life-worth-living-9bf212919f16',
-      image: '/poster1.webp', 
     },
     {
       title: 'The Burden of Awareness: Dostoevsky on Intelligence and Happiness',
       description: 'Sometimes I think about how easily we used to be happy as children. But as our understanding and intelligence grew...',
       link: 'https://medium.com/@yansh08/the-burden-of-awareness-dostoevsky-on-intelligence-and-happiness-3a9d9e6f3b02',
-      image: '/poster2.webp', 
     },
   ];
 
@@ -74,7 +66,7 @@ const Blog: React.FC = () => {
 
   return (
     <motion.section
-      id="blog" // Important for sidebar navigation
+      id="blog"
       className="relative z-10 py-20 px-4 max-w-6xl mx-auto"
       variants={containerVariants}
       initial="hidden"
@@ -96,7 +88,7 @@ const Blog: React.FC = () => {
 
       <motion.div variants={itemVariants} className="text-center mt-12">
         <a
-          href="https://medium.com/@yansh08" // Link to your main Medium profile
+          href="https://medium.com/@yansh08"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-200 transition-colors text-lg"
