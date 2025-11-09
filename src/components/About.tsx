@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Book, Code } from "lucide-react";
 import clsx from "clsx";
-import LightRays from "./LightRays";
 
 const About: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -52,30 +51,19 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section className="relative z-10 py-20 px-4 overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="opacity-60"
-        />
-        <div className="absolute inset-0 bg-black/10"></div>
-      </div>
-
+    <section
+      className="relative z-0 py-24 px-4 overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/aboutme.webp')",
+      }}
+    >
       {/* Inner container  */}
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-white text-center mb-12 drop-shadow-lg">
           About Me
         </h2>
 
-        <div className="backdrop-blur-xs bg-gradient-to-br from-gray-800/40 to-black/40 border border-gray-700/50 rounded-lg p-8 md:p-12 shadow-2xl relative overflow-hidden">
+        <div className="backdrop-blur-xs bg-transparent border border-gray-700/30 rounded-lg p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
           <div

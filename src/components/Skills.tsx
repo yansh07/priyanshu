@@ -48,35 +48,37 @@ const Skills = () => {
   }));
 
   return (
-    <section className="py-24">
-      <h2 className="text-4xl font-bold text-white text-center mb-12">
-        Skills
-      </h2>
+    <section
+      id="skills"
+      className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-24 px-4"
+      style={{
+        backgroundImage: "url('/skill.webp')",
+      }}
+    >
+      {/* 🔮 dark overlay for contrast */}
+      <div className="absolute inset-0 bg-black/50" />
 
-      <div
-        className="relative max-w-6xl mx-auto rounded-xl overflow-hidden bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/skill.webp')",
-          minHeight: "150px",  
-          paddingTop: "60px", 
-          paddingBottom: "60px", 
-        }}
-      >
-        {/* overlay  */}
-        <div className="absolute inset-0 bg-black/30"></div>
+      {/* 🌌 Content wrapper */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-white mb-12 drop-shadow-lg">
+          Skills
+        </h2>
 
-        {/* Icons Loop */}
-        <div className="relative z-10 w-full px-4">
-          <LogoLoop
-            logos={techLogos}
-            speed={120}
-            direction="left"
-            logoHeight={48}
-            gap={60}
-            pauseOnHover
-            scaleOnHover
-            ariaLabel="Skill logo"
-          />
+        {/* Logo Loop container */}
+        <div className="relative rounded-xl overflow-hidden flex items-center justify-center shadow-2xl  py-16 md:py-20">
+
+          <div className="relative z-10 w-full px-4">
+            <LogoLoop
+              logos={techLogos}
+              speed={120}
+              direction="left"
+              logoHeight={48}
+              gap={60}
+              pauseOnHover
+              scaleOnHover
+              ariaLabel="Skill logo"
+            />
+          </div>
         </div>
       </div>
     </section>
