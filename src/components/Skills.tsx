@@ -48,27 +48,38 @@ const Skills = () => {
   }));
 
   return (
-    <div>
+    <section className="py-24">
       <h2 className="text-4xl font-bold text-white text-center mb-12">
         Skills
       </h2>
 
       <div
-        style={{ height: "200px", position: "relative", overflow: "hidden" }}
-        className="max-w-6xl mx-auto px-4"
+        className="relative max-w-6xl mx-auto rounded-xl overflow-hidden bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/skill.webp')",
+          minHeight: "150px",  
+          paddingTop: "60px", 
+          paddingBottom: "60px", 
+        }}
       >
-        <LogoLoop
-          logos={techLogos}
-          speed={120}
-          direction="left"
-          logoHeight={48}
-          gap={60}
-          pauseOnHover
-          scaleOnHover
-          ariaLabel="Skill logo"
-        />
+        {/* overlay  */}
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        {/* Icons Loop */}
+        <div className="relative z-10 w-full px-4">
+          <LogoLoop
+            logos={techLogos}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={60}
+            pauseOnHover
+            scaleOnHover
+            ariaLabel="Skill logo"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

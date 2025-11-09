@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section
       id="home"
       className="relative z-10 min-h-[calc(100vh)] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center"
-      style={{ backgroundImage: "url('/bgbg.jpg')" }}
+      style={{ backgroundImage: "url('/bgbg.webp')" }}
     >
       <div className="absolute inset-0 bg-black/10"></div>
   <div className="relative z-10 flex flex-col space-y-6 max-w-4xl mx-auto"></div>
