@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 50, damping: 10 },
+      transition: { type: "spring" as const, stiffness: 50, damping: 10 },
     },
     hover: { scale: 1.03, boxShadow: "0px 0px 20px rgba(0,255,255,0.4)" },
   };
