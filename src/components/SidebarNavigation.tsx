@@ -3,7 +3,6 @@ import React from 'react';
 import { motion, Transition } from 'framer-motion';
 import { User, Folder, MessageSquare } from 'lucide-react';
 import { SiGithub, SiGmail } from 'react-icons/si';
-import ThemeToggle from './ThemeToggle';
 import Image from 'next/image';
 import { FaTwitter } from 'react-icons/fa';
 
@@ -70,7 +69,6 @@ const SidebarNavigation: React.FC = () => {
       <NavItem href="/aboutme" Icon={User} label="About" />
       <NavItem href="/projects" Icon={Folder} label="Projects" />
       <NavItem href="#contact" Icon={MessageSquare} label="Contact" />
-      <span className='px-2'><ThemeToggle /></span>
 
       <div className="border-t border-gray-700/50 mx-4 my-2" />
 

@@ -6,13 +6,14 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center px-4"
+      className="relative z-10 min-h-[calc(100vh-80px)] flex flex-col items-center justify-center text-center px-4 bg-cover bg-center"
+      style={{ backgroundImage: "url('/bgbg.jpg')" }}
     >
+      <div className="absolute inset-0 bg-black/10"></div>
+  <div className="relative z-10 flex flex-col space-y-6 max-w-4xl mx-auto"></div>
       <div className="relative z-10 flex flex-col space-y-6 max-w-4xl mx-auto">
         {/* Avatar */}
-        <div
-          className="mx-auto"
-        >
+        <div className="mx-auto">
           <Image
             src="/ghibli.webp"
             width={120}
@@ -23,21 +24,17 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Heading */}
-        <h1
-          className="font-bold text-4xl md:text-6xl text-white flex flex-col items-center gap-2"
-        >
+        <h1 className="backdrop-blur-xs font-bold text-4xl md:text-6xl text-white flex flex-col items-center gap-2">
           Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white to-yellow-400 bg-clip-text text-transparent">
             Priyanshu
           </span>
         </h1>
 
         {/* Subtext */}
-        <h2
-          className="font-light text-2xl md:text-4xl text-gray-300"
-        >
+        <h2 className="backdrop-blur-xs font-light text-2xl md:text-4xl text-gray-300">
           I{" "}
-          <span className="font-semibold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <span className="font-semibold bg-gradient-to-r from-white to-yellow-400 bg-clip-text text-transparent">
             Engineer the Invisible
           </span>
         </h2>
