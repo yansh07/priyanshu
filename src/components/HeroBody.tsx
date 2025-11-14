@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ImLocation } from "react-icons/im";
 
 const HeroBody = () => {
   return (
@@ -15,6 +16,8 @@ const HeroBody = () => {
           @yansh_08
         </Link>
         <p className="mt-6 font-medium dark:text-neutral-200 text-xl font-mono tracking-tighter">20, Curiosity drives me. Learn and grow, that&apos;s what I do.</p>
+
+        <p className="flex items-center gap-4 text-xl font-medium mt-3 dark:text-neutral-400 text-neutral-500"><ImLocation /><span>Dehradun, Uttarakhand</span></p>
       </div>
     </div>
   );
