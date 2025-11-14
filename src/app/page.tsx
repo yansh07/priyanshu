@@ -1,6 +1,7 @@
 'use client';
 import Navbar from "@/components/Navbar";
 import Firsthero from "@/components/Firsthero";
+import HeroBody from "@/components/HeroBody";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
     >
         <Navbar />
         <Firsthero />
+        <HeroBody />
     </div>
   );
 }
