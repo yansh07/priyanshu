@@ -53,6 +53,7 @@ const techStack = [
   { name: "Prisma", icon: SiPrisma },
   { name: "JWT", icon: SiJsonwebtokens },
   { name: "Supabase", icon: SiSupabase },
+  { name: "Vite", icon: SiVite },
   { name: "Redis", icon: SiRedis },
   { name: "Railway", icon: SiRailway },
   { name: "Vercel", icon: SiVercel },
