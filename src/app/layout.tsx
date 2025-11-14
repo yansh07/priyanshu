@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Mono } from "next/font/google";
-// import { ThemeProvider } from "next-themes";
 import "./globals.css";
 // import Head from "next/head";
 
@@ -49,11 +48,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         rel="preload"
-        className={`${inter.variable} ${firaMono.variable} antialiased`}
+        className={`${inter.variable} ${firaMono.variable} antialiased bg-white/10 dark:bg-[#060000] transition-colors duration-300`}
       >
-          <div className="bg-gradient-to-br from-[#060000] to-blue-950">
-            {children}
-          </div>
+          {children}
       </body>
     </html>
   );

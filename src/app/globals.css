@@ -1,30 +1,9 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+@custom-variant dark (&:where(.dark, .dark *));
 
-@custom-variant dark (&:is(.dark *));
 
 /* Smooth scrolling */
 html {
   overflow-y: scroll;
-  data-scroll-behavior: smooth;
-}
-
-body {
-  padding-right: calc(100vw - 100%);
-}
-/* Prevent horizontal overflow globally */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  overflow-x: hidden;
-  width: 100%;
+  scroll-behavior: smooth;
 }

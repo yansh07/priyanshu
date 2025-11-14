@@ -1,36 +1,16 @@
 'use client';
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills"; 
-import Projects from "@/components/Projects";
-import Blog from "@/components/Blog";
-import Contact from "@/components/Contact"; 
-import Footer from "@/components/Footer"; 
-import SidebarNavigation from "@/components/SidebarNavigation";
+import Navbar from "@/components/Navbar";
+import Firsthero from "@/components/Firsthero";
 
 export default function Home() {
   return (
     <div
-      className="relative min-h-screen overflow-x-hidden w-full 
-                 bg-gradient-to-br from-[#060000] to-blue-950 
-                 text-gray-200
-                 font-sans
+      className="relative min-h-screen overflow-x-hidden max-w-4xl mx-auto
+                 font-sans 
                  "
     >
-      {/* Dynamic space background component */}
-      <div className="absolute inset-0 z-0 opacity-80" style={{ backgroundSize: 'cover', backgroundAttachment: 'fixed' }} />
-
-      <div className="relative z-10"> 
-        {/* <Navbar /> */}
-        <SidebarNavigation />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Blog /> 
-        <Contact /> 
-        <Footer /> 
-      </div>
+        <Navbar />
+        <Firsthero />
     </div>
   );
 }
