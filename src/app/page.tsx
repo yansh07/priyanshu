@@ -5,6 +5,7 @@ import HeroBody from "@/components/HeroBody";
 import Aboutme from "@/components/Aboutme";
 import Tech from "@/components/Tech";
 import Projects from "@/components/Projects";
+import Blog from "@/components/Blog";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Aboutme />
         <Tech />
         <Projects />
+        <Blog />
     </div>
   );
 }

@@ -17,7 +17,7 @@ const projectData = [
       "Built a full-stack URL shortening platform that enables users to instantly generate secure, shareable links.",
     liveUrl: "https://shortleepro.vercel.app/",
     github: "https://github.com/yansh07/shortly/",
-    techStack: ["Next.js", "TailwindCSS", "Express.js", "PostgreSQL"],
+    techStack: ["Next.js", "TailwindCSS", "Express.js", "PostgreSQL", "Prisma"],
   },
 ];
 
@@ -52,7 +52,7 @@ const Projects = () => {
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 text-xs rounded-md bg-neutral-100 dark:bg-neutral-800 dark:text-neutral-200 border border-neutral-200 dark:border-neutral-700"
+                  className="px-2 py-1 text-xs rounded-md bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl border border-neutral-200 dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 dark:border-neutral-700 shadow-lg"
                 >
                   {tech}
                 </span>
@@ -84,14 +84,15 @@ const Projects = () => {
       </div>
 
       {/* more projects button */}
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-6 border border-neutral-200 dark:border-neutral-700">
         <Link
           href="#"
-          className="px-6 py-2 border border-neutral-300 dark:border-neutral-700 rounded-full flex items-center gap-2
-            hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300"
+          className="px-8 m-2 py-2 rounded-full flex items-center gap-2
+            bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl border border-neutral-200 dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 dark:border-neutral-700 shadow-2xl text-shadow-xl"
         >
           All Projects →
         </Link>
+        {/* <div className="border"></div> */}
       </div>
     </div>
   );
