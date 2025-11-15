@@ -15,9 +15,10 @@ function Navbar() {
 
       {/* RIGHT (2 columns) */}
       <div className="col-span-2 grid justify-end">
-        <div className="flex col-span-4 font-mono font-light text-lg tracking-tighter px-6 gap-4 leading-tight">
-          <Link href={"#"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Projects</Link>
-          <Link href={"https://medium.com/@yansh08/"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Blog</Link>
+        <div className="flex col-span-4 font-mono font-medium text-xl tracking-tighter px-6 gap-4 leading-tight">
+          {/* <Link href={"#"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Projects</Link>
+          <Link href={"https://medium.com/@yansh08/"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Blog</Link> */}
+          <Link href={"/resume.pdf"} className="px-4 hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Resume</Link>
           <Link href={"https://github.com/yansh07/"}>
             <SiGithub className="text-xl hover:text-gray-400 transition-colors duration-200" />
           </Link>
