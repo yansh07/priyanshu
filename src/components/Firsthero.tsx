@@ -16,29 +16,38 @@ const Firsthero = () => {
         />
       </div>
 
-      {/* avatar*/}
+      {/* avatar */}
       <div className="relative">
         <div
-        style={{backgroundImage:"url('/leaves.png')"}}
-          className=" bg-cover bg-no-repeat
-      absolute -top-16 left-3 md:left-6 
-      w-35 md:w-40 h-35 md:h-40 
-      rounded-full p-2 
-      border-2 border-neutral-300 dark:border-neutral-700 
-      backdrop-blur-3xl cursor-pointer
-      transition-all duration-300 ease-out
-      hover:scale-105 hover:-rotate-1
-      hover:shadow-[0_0_25px_rgba(0,0,0,0.15)]
-      dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]
-      hover:border-neutral-100 dark:hover:border-neutral-500
-    "
+          className="
+            overflow-hidden
+            bg-cover bg-no-repeat
+            absolute -top-16 left-3 md:left-6 
+            w-35 md:w-40 h-35 md:h-40 
+            rounded-full p-2 
+            border-2 border-neutral-300 dark:border-neutral-700 
+            backdrop-blur-3xl cursor-pointer
+            transition-all duration-300 ease-out
+            hover:scale-105 hover:-rotate-1
+            hover:shadow-[0_0_25px_rgba(0,0,0,0.15)]
+            dark:hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]
+            hover:border-neutral-100 dark:hover:border-neutral-500
+          "
         >
+          <Image
+            src="/leaves.webp"
+            alt="leaves bg"
+            fill
+            className="object-cover rounded-full"
+          />
+
           <div
             className="
-        w-full h-full rounded-full overflow-hidden
-        transition-all duration-300
-        hover:brightness-110
-      "
+              relative z-10
+              w-full h-full rounded-full overflow-hidden
+              transition-all duration-300
+              hover:brightness-110
+            "
           >
             <Image
               src="/mememe.png"
@@ -46,14 +55,14 @@ const Firsthero = () => {
               width={300}
               height={300}
               className="
-          w-full h-full object-cover object-[50%_20%]
-        "
+                w-full h-full object-cover object-[50%_20%]
+              "
             />
           </div>
         </div>
       </div>
 
-      {/* Push content down like Twitter */}
+      {/* push content down */}
       <div className="h-20"></div>
     </div>
   );

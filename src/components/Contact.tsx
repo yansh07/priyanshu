@@ -62,7 +62,7 @@ const Contact = () => {
               className="dark:text-neutral-300 cursor-pointer border-b md:border-r border-neutral-200 dark:border-neutral-800 p-6 flex gap-6"
             >
               {/* link icons */}
-              <div>
+              <div className="hover:scale-125 transition-all duration-300 hover:rotate-3">
                 <Icon className="text-4xl" />
               </div>
 

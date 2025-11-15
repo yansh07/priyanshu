@@ -49,7 +49,7 @@ const Blog = () => {
                 target="_blank"
                 className="flex items-center gap-1 hover:underline text-sm font-mono"
               >
-                <SiMedium className="w-8 h-8 hover:scale-125 transition-all duration-300 shadow-lg" />
+                <SiMedium className="w-8 h-8 hover:scale-125 transition-all duration-300 shadow-lg hover:rotate-3" />
               </Link>
             </div>
           </div>
@@ -58,13 +58,15 @@ const Blog = () => {
 
       {/* more projects button */}
       <div className="flex justify-center mt-6 border border-neutral-200 dark:border-neutral-800">
+        <div className="border border-neutral-200 dark:border-neutral-800"/>
         <Link
           href="https://medium.com/@yansh08/"
-          className="px-8 m-2 py-2 rounded-full flex items-center gap-2
-            bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl border border-neutral-200 dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 dark:border-neutral-800 shadow-2xl text-shadow-xl"
+          className="px-8 m-2 py-2 rounded-sm flex items-center gap-2
+            bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 shadow-2xl text-shadow-xl"
         >
           More Blogs →
         </Link>
+        <div className="border border-neutral-200 dark:border-neutral-800"/>
       </div>
     </div>
   );
