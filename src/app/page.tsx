@@ -4,6 +4,7 @@ import Firsthero from "@/components/Firsthero";
 import HeroBody from "@/components/HeroBody";
 import Aboutme from "@/components/Aboutme";
 import Tech from "@/components/Tech";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroBody />
         <Aboutme />
         <Tech />
+        <Projects />
     </div>
   );
 }
