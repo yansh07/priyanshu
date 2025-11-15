@@ -8,7 +8,7 @@ const Firsthero = () => {
       {/* BANNER */}
       <div className="relative w-full h-[150px] md:h-[250px] lg:h-[300px] rounded-lg overflow-hidden">
         <Image
-          src="/herobg.webp"
+          src="/heroo.png"
           alt="hero banner"
           fill
           className="object-cover"
