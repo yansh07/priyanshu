@@ -18,8 +18,7 @@ function Navbar() {
           <Link href={"https://medium.com/@yansh08/"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Blog</Link> */}
           <Link
             href={"/resume.pdf"}
-            target="_blank"
-            rel="noopener noreferrer"
+            prefetch={false}
             className="px-4 hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4"
           >
             Resume
