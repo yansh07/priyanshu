@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { IconType } from "react-icons";
 import { LuArrowRightFromLine } from "react-icons/lu";
