@@ -38,7 +38,7 @@ const Blog = () => {
             </h2>
 
             {/* project description */}
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
+            <p className="text-sm font-mono text-neutral-600 dark:text-neutral-300 leading-relaxed">
               {project.description}
             </p>
 

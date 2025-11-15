@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="h-px w-20 bg-neutral-300 dark:bg-neutral-700 my-4"></div>
 
         {/* Bottom line */}
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-sm font-mono text-neutral-600 dark:text-neutral-400">
           © {new Date().getFullYear()} Priyanshu. Built with Next.js + TailwindCSS.
         </p>
 
