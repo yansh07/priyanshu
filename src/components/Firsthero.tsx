@@ -19,10 +19,11 @@ const Firsthero = () => {
       {/* avatar*/}
       <div className="relative">
         <div
-          className="
+        style={{backgroundImage:"url('/leaves.png')"}}
+          className=" bg-cover bg-no-repeat
       absolute -top-16 left-3 md:left-6 
       w-35 md:w-40 h-35 md:h-40 
-      rounded-full bg-black/50 p-2 
+      rounded-full p-2 
       border-2 border-neutral-300 dark:border-neutral-700 
       backdrop-blur-3xl cursor-pointer
       transition-all duration-300 ease-out
