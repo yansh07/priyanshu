@@ -19,7 +19,7 @@ function Navbar() {
           {/* <Link href={"#"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Projects</Link>
           <Link href={"https://medium.com/@yansh08/"} className="hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Blog</Link> */}
           <Link href={"/resume.pdf"} className="px-4 hover:text-gray-400 transition-colors duration-200 hover:underline hover:underline-offset-4">Resume</Link>
-          <Link href={"https://github.com/yansh07/"}>
+          <Link href={"https://github.com/yansh07/"} aria-label="Github icon">
             <SiGithub className="text-xl hover:text-gray-400 transition-colors duration-200" />
           </Link>
           <div  className="border border-gray-200 mx-4 dark:border-neutral-800"><ModeToggle /></div>

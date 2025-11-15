@@ -45,6 +45,7 @@ const Blog = () => {
             {/* links */}
             <div className="flex items-center gap-5 mt-2 dark:text-neutral-300">
               <Link
+              aria-label="Medium icon"
                 href={project.liveurl}
                 target="_blank"
                 className="flex items-center gap-1 hover:underline text-sm font-mono"
@@ -60,6 +61,7 @@ const Blog = () => {
       <div className="flex justify-center mt-6 border border-neutral-200 dark:border-neutral-800">
         <div className="border border-neutral-200 dark:border-neutral-800"/>
         <Link
+        aria-label="Medium button"
           href="https://medium.com/@yansh08/"
           className="px-8 m-2 py-2 rounded-sm flex items-center gap-2
             bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 shadow-2xl text-shadow-xl"

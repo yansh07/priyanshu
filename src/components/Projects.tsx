@@ -88,6 +88,7 @@ const Projects = () => {
         <div className="border border-neutral-200 dark:border-neutral-800"/>
         <Link
           href="#"
+          aria-label="Project button"
           className="px-8 m-2 py-2 rounded-sm flex items-center gap-2
             bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-950 backdrop-blur-2xl dark:hover:bg-neutral-800 transition-all font-mono dark:text-neutral-300 shadow-2xl text-shadow-xl"
         >

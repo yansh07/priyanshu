@@ -15,17 +15,17 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex gap-6 text-2xl">
-          <Link href="https://github.com/yansh07" target="_blank" 
+          <Link href="https://github.com/yansh07" target="_blank" aria-label="Github icon"
             className="hover:scale-110 transition-all text-neutral-700 dark:text-neutral-300">
             <SiGithub />
           </Link>
 
-          <Link href="mailto:pksingh69313@gmail.com" target="_blank" 
+          <Link href="mailto:pksingh69313@gmail.com" target="_blank" aria-label="Gmail icon"
             className="hover:scale-110 transition-all text-neutral-700 dark:text-neutral-300">
             <SiGmail />
           </Link>
 
-          <Link href="https://x.com/yansh_08" target="_blank" 
+          <Link href="https://x.com/yansh_08" target="_blank" aria-label="Twitter icon"
             className="hover:scale-110 transition-all text-neutral-700 dark:text-neutral-300">
             <SiX />
           </Link>
