@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div
-      className="relative min-h-screen overflow-x-hidden max-w-4xl mx-auto
+      className="relative min-h-screen overflow-x-hidden max-w-4xl mx-auto 
                  font-sans 
                  "
     >
