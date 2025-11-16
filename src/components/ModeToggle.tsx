@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const ModeToggle = () => {
@@ -17,13 +17,13 @@ const ModeToggle = () => {
   };
 
   const toggleTheme = () => {
-    // 🔊 Play sound
+    //  Play sound
     if (audioRef.current) {
       audioRef.current.currentTime = 0; // reset for instant play
       audioRef.current.play();
     }
 
-    // 🌗 Toggle logic
+    //  Toggle logic
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     applyTheme(newTheme);
@@ -38,9 +38,8 @@ const ModeToggle = () => {
 
   return (
     <div className="absolute size-8 rounded-md flex items-center justify-center top-4.5 text-xl transition-colors duration-300 md:right-6 right-3">
-
       <button
-      aria-label='Toggle button'
+        aria-label="Toggle button"
         onClick={toggleTheme}
         className="
           relative w-8 h-8 flex items-center justify-center 
@@ -52,7 +51,11 @@ const ModeToggle = () => {
         <FaMoon
           className={`
             absolute transition-all duration-500 
-            ${theme === "light" ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"}
+            ${
+              theme === "light"
+                ? "opacity-100 rotate-0"
+                : "opacity-0 -rotate-90"
+            }
           `}
         />
         <FaSun
@@ -63,9 +66,8 @@ const ModeToggle = () => {
         />
       </button>
 
-      {/* 🔊 Hidden preloaded audio element */}
+      {/* audio element */}
       <audio ref={audioRef} src="/switch.mp3" preload="auto" />
-
     </div>
   );
 };
