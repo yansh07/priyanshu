@@ -4,8 +4,8 @@ import { SiGithub, SiGmail, SiX } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-24 border-t border-neutral-300 dark:border-neutral-800 py-10">
-      
+    <footer className="w-full mt-24 border-t border-neutral-300 dark:border-neutral-800 py-10 border-b mb-10">
+    
       <div className="max-w-3xl mx-auto flex flex-col items-center gap-4 text-center">
 
         {/* Name  */}
@@ -35,7 +35,7 @@ export default function Footer() {
         <div className="h-px w-20 bg-neutral-300 dark:bg-neutral-700 my-4"></div>
 
         {/* Bottom line */}
-        <p className="text-sm font-mono text-neutral-600 dark:text-neutral-400">
+        <p className="text-sm font-mono text-neutral-600 dark:text-neutral-400 ">
           © {new Date().getFullYear()} Priyanshu. Built with Next.js + TailwindCSS.
         </p>
 
