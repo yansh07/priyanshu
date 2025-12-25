@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { IconType } from "react-icons";
 import { LuArrowRightFromLine } from "react-icons/lu";
-import { FaSquareGithub, FaSquareXTwitter, FaDiscord } from "react-icons/fa6";
-import { SiGmail, SiMedium } from "react-icons/si";
-import { FaWhatsappSquare } from "react-icons/fa";
+import { FaSquareGithub, FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 const links: { name: string; url: string; icon: IconType; user: string }[] = [
   {
     name: "GitHub",
@@ -25,22 +25,10 @@ const links: { name: string; url: string; icon: IconType; user: string }[] = [
     icon: FaSquareXTwitter,
   },
   {
-    name: "Medium",
-    url: "https://medium.com/@yansh08/",
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/yansh08/",
     user: "@yansh08",
-    icon: SiMedium,
-  },
-  {
-    name: "Discord",
-    url: "https://discord.gg/Yzupbvgs",
-    user: "@yansh8",
-    icon: FaDiscord,
-  },
-  {
-    name: "WhatsApp",
-    url: "https://wa.me/916203617455?text=Hi%20I%20want%20to%20connect!",
-    user: "priyanshu",
-    icon: FaWhatsappSquare,
+    icon: FaLinkedin,
   },
 ];
 

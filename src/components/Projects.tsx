@@ -12,12 +12,12 @@ const projectData = [
     techStack: ["React.js", "TailwindCSS", "Express.js", "MongoDB", "Node.js"],
   },
   {
-    name: "Shortly",
+    name: "Clipped",
     description:
-      "Built a full-stack URL shortening platform that enables users to instantly generate secure, shareable links.",
-    liveUrl: "https://shortleepro.vercel.app/",
-    github: "https://github.com/yansh07/shortly/",
-    techStack: ["Next.js", "TailwindCSS", "Express.js", "PostgreSQL", "Prisma"],
+      "Built a full-stack URL shortening platform that enables users to instantly generate secure, shareable links with advance analytics and graphs.",
+    liveUrl: "https://urlclipper.vercel.app/",
+    github: "https://github.com/yansh07/clipped---url-shortner",
+    techStack: ["Next.js", "TailwindCSS", "FastAPI", "PostgreSQL", "Redis"],
   },
 ];
 

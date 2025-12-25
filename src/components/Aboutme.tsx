@@ -10,8 +10,8 @@ const Aboutme = () => {
       <p className="font-mono font-light text-lg tracking-tighter m-4 leading-normal dark:text-neutral-300">
         Hello, Priyanshu this side.
         <br />
-        I&apos;m a BCA student who treats learning like survival. I work across
-        Python, JavaScript, and the MERN world, building. Theory bores me, I
+        I&apos;m a BCA student who treats learning like survival. I work with
+        Python. Theory bores me, I
         want things that actually run.
         <br /><br/>
         Outside tech, I&apos;m built on philosophy. Dostoevsky, Orwell, Kafka,
