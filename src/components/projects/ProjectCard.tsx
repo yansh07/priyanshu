@@ -32,7 +32,7 @@ export default function ProjectCard({
           {title}
         </h3>
         {badge && (
-          <Badge variant="primary" className="whitespace-nowrap">
+          <Badge variant="primary">
             {badge}
           </Badge>
         )}
