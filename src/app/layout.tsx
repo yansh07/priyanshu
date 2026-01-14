@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Mono } from "next/font/google";
+import { Fira_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 // import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--font-inter" });
 const firaMono = Fira_Mono({
   weight: "400",
   subsets: ["latin"],
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Priyanshu",
   description: "Full-Stack Developer",
   icons: {
-    icon: "/ghibli.webp",
+    icon: "/mememe.webp",
   },
   openGraph: {
     title: "Priyanshu",
@@ -48,7 +48,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         rel="preload"
-        className={`${inter.variable} ${firaMono.variable} antialiased bg-white/10 dark:bg-[#060000] transition-colors duration-300`}
+        className={`${nunito.variable} ${firaMono.variable} antialiased transition-colors duration-300`}
       >
           {children}
       </body>

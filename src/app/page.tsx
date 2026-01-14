@@ -1,30 +1,28 @@
-'use client';
-import Navbar from "@/components/Navbar";
-import Firsthero from "@/components/Firsthero";
-import HeroBody from "@/components/HeroBody";
-import Aboutme from "@/components/Aboutme";
-import Tech from "@/components/Tech";
-import Projects from "@/components/Projects";
-import Blog from "@/components/Blog";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+"use client";
+import Navbar from "@/components/navbar/Navbar";
+import HeroSection from "@/components/hero/HeroSection";
+import TechStack from "@/components/tech-stack/TechStack";
+import Projects from "@/components/projects/Projects";
+import Education from "@/components/education/Education";
 
 export default function Home() {
   return (
-    <div
-      className="relative min-h-screen overflow-x-hidden max-w-4xl mx-auto 
-                 font-sans 
-                 "
-    >
-        <Navbar />
-        <Firsthero />
-        <HeroBody />
-        <Aboutme />
-        <Tech />
+    <div className="relative min-h-screen overflow-x-hidden bg-white dark:bg-slate-950">
+      <Navbar />
+      <main className="max-w-5xl mx-auto">
+        <HeroSection />
+        <TechStack />
         <Projects />
-        <Blog />
-        <Contact />
-        <Footer />
+        <Education />
+        
+        {/* Footer */}
+        <footer className="border-t border-slate-200 dark:border-slate-800 py-12 px-6 text-center text-slate-600 dark:text-slate-400">
+          <p>
+            Designed & built with <span className="text-orange-500">♥</span> by Priyanshu Kumar Singh
+          </p>
+          <p className="text-sm mt-2">© 2026. All rights reserved.</p>
+        </footer>
+      </main>
     </div>
   );
 }
