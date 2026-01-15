@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
 
         {/* Social Links */}
-        <div className="hidden md:flex items-center gap-6 px-12">
+        <div className="flex items-center gap-6 px-12">
           <a
             href={`mailto:${SOCIAL_LINKS.email}`}
             className="group text-slate-600 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors duration-300"

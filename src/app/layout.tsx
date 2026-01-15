@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fira_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import SplashScreen from "@/components/SplashScreen";
 // import Head from "next/head";
 
 const nunito = Nunito_Sans({ subsets: ["latin"], variable: "--font-inter" });
@@ -50,6 +51,7 @@ export default function RootLayout({
         rel="preload"
         className={`${nunito.variable} ${firaMono.variable} antialiased transition-colors duration-300`}
       >
+          <SplashScreen />
           {children}
       </body>
     </html>
