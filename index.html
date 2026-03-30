@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Priyanshu - Full-Stack Developer. Specialized in Go, TypeScript, FastAPI, React. 140+ LeetCode problems solved. Zero-knowledge encryption, uptime monitoring, and personal finance dashboards.">
+    <meta name="keywords" content="full-stack developer, Go developer, TypeScript, Python, FastAPI, React, PostgreSQL, steganography, backend engineer, Node.js, DevOps">
+    <meta name="author" content="Priyanshu Kumar Singh">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" href="/mememe.webp" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/mememe.webp">
+    <link rel="apple-touch-icon" href="/mememe.webp">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Priyanshu - Full-Stack Developer">
+    <meta property="og:description" content="Building exceptional web applications with Go, TypeScript, and modern cloud architectures. 140+ LeetCode problems, 450+ commits, 3 production apps.">
+    <meta property="og:url" content="https://priyanshu.github.io">
+    <meta property="og:profile:first_name" content="Priyanshu">
+    <meta property="og:profile:last_name" content="Singh">
+    <meta property="og:profile:username" content="yansh07">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Priyanshu - Full-Stack Developer">
+    <meta name="twitter:description" content="Building the comeback with Go, TypeScript, Python. 140+ LeetCode problems solved. Oversight | Ledgerly | Gophar">
+    <meta name="twitter:creator" content="@yansh07">
+    
+    <!-- Canonical -->
+    <meta rel="canonical" href="https://priyanshu.github.io">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <title>Priyanshu - Full-Stack Developer | Go | TypeScript | FastAPI | React</title>
+    <link href="output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #a1a1aa;
+            background-image: 
+                linear-gradient(rgba(220, 38, 38, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .scanlines::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        .screen-flicker {
+            animation: flicker 0.15s infinite;
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(220, 38, 38, 0.02);
+            z-index: 49;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::before, .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .glitch-hover:hover .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 rgba(220, 38, 38, 0.8);
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+        .glitch-hover:hover .glitch-text::after {
+            left: -2px;
+            text-shadow: 1px 0 rgba(0, 255, 255, 0.8);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim-1 {
+            0% { clip-path: inset(20% 0 80% 0); }
+            20% { clip-path: inset(60% 0 10% 0); }
+            40% { clip-path: inset(40% 0 50% 0); }
+            60% { clip-path: inset(80% 0 5% 0); }
+            80% { clip-path: inset(10% 0 70% 0); }
+            100% { clip-path: inset(30% 0 50% 0); }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% { clip-path: inset(10% 0 60% 0); }
+            20% { clip-path: inset(30% 0 20% 0); }
+            40% { clip-path: inset(70% 0 10% 0); }
+            60% { clip-path: inset(40% 0 50% 0); }
+            80% { clip-path: inset(80% 0 5% 0); }
+            100% { clip-path: inset(20% 0 30% 0); }
+        }
+
+        .tactical-border {
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            background: linear-gradient(135deg, rgba(24, 24, 27, 0.9) 0%, rgba(9, 9, 11, 0.95) 100%);
+            box-shadow: inset 0 0 30px rgba(220, 38, 38, 0.02);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tactical-border::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(220, 38, 38, 0.5);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .tactical-border:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tactical-border:hover {
+            border-color: rgba(220, 38, 38, 0.8);
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.15), inset 0 0 30px rgba(220, 38, 38, 0.1);
+        }
+
+        /* Typewriter cursor */
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #dc2626;
+            animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { max-width: 0 }
+            to { max-width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #dc2626 }
+        }
+
+        /* Red blur behind elements */
+        .bat-glow {
+            filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.5));
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Priyanshu Kumar Singh",
+        "url": "https://priyanshu-singh.dev",
+        "image": "https://api.dicebear.com/7.x/avataaars/svg?seed=priyanshu",
+        "jobTitle": "Full-Stack Developer",
+        "sameAs": [
+            "https://github.com/yansh07",
+            "https://linkedin.com/in/yansh08"
+        ],
+        "email": "pksingh69313@gmail.com",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Dehradun Institute of Technology"
+        },
+        "knowsAbout": [
+            "Go (Golang)",
+            "TypeScript",
+            "Python",
+            "React",
+            "FastAPI",
+            "PostgreSQL",
+            "MongoDB",
+            "Docker",
+            "Node.js",
+            "Steganography"
+        ]
+    }
+    </script>
+    
+    <!-- Additional Schema: SoftwareApplication for Projects -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Oversight",
+                "description": "Zero-knowledge ephemeral file-sharing platform with steganography encryption",
+                "applicationCategory": "SecurityApplication",
+                "url": "https://oversight-ten.vercel.app",
+                "codeRepository": "https://github.com/yansh07/oversight",
+                "programmingLanguage": ["Go", "TypeScript", "React"]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Ledgerly",
+                "description": "Full-stack personal finance dashboard with real-time expense tracking",
+                "applicationCategory": "FinanceApplication",
+                "url": "https://ledgerly-sandy.vercel.app",
+                "codeRepository": "https://github.com/yansh07/Ledgerly",
+                "programmingLanguage": ["Python", "TypeScript", "React"]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Gophar",
+                "description": "24/7 uptime monitoring system with Goroutine-based health checks",
+                "applicationCategory": "MonitoringApplication",
+                "url": "https://gophar.vercel.app",
+                "codeRepository": "https://github.com/yansh07/gophar",
+                "programmingLanguage": ["Go", "TypeScript", "React"]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="font-mono text-gray-300 scanlines pb-20 selection:bg-blood selection:text-white">
+    <div class="screen-flicker"></div>
+
+    <!-- Top HUD Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 border-b border-blood/30 bg-black/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center text-xs tracking-[0.2em] font-bold">
+            <div class="text-blood flex items-center gap-2">
+                <div class="w-2 h-2 bg-blood animate-pulse rounded-full"></div>
+                SYS_ONLINE // IDENTITY: PK_SINGH
+            </div>
+            <div class="hidden md:flex gap-6">
+                <a href="#training" class="hover:text-blood transition-colors">TRAINING_LOGS</a>
+                <a href="#arsenal" class="hover:text-blood transition-colors">THE_ARSENAL</a>
+                <a href="#missions" class="hover:text-blood transition-colors">ACTIVE_MISSIONS</a>
+                <a href="#signal" class="hover:text-blood transition-colors">BAT_SIGNAL</a>
+            </div>
+            <a href="https://github.com/yansh07" target="_blank" rel="noopener noreferrer" class="px-6 py-2 border border-blood/50 text-blood hover:bg-blood/10 transition-colors uppercase text-[10px] font-bold tracking-wider">
+                GitHub
+            </a>
+        </div>
+    </nav>
+
+    <!-- Initializing Hero -->
+    <section class="min-h-screen flex flex-col justify-center items-center px-4 relative">
+        <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+            <div class="w-[300px] h-[300px] md:w-[800px] md:h-[800px] bg-blood rounded-full blur-[150px]"></div>
+        </div>
+        
+        <div class="z-10 w-full max-w-4xl border-l border-blood/50 pl-6 md:pl-12 mt-20">
+            <p class="text-blood mb-4 text-sm tracking-[0.3em] uppercase">SYSTEM BOOT SEQUENCE... <span class="animate-pulse">OK</span></p>
+            
+            <h1 class="font-display font-bold text-5xl md:text-8xl text-white uppercase tracking-tighter mb-2 leading-none glitch-hover">
+                <span class="glitch-text" data-text="PRIYANSHU">PRIYANSHU</span><br/>
+                <span class="text-blood bat-glow glitch-text" data-text="K. SINGH">K. SINGH</span>
+            </h1>
+            
+            <div class="mt-8 mb-12">
+                <p class="typewriter text-lg md:text-2xl font-bold tracking-widest text-gray-400">
+                    > INITIATING COMEBACK PROTOCOL_
+                </p>
+            </div>
+            
+            <div class="max-w-2xl text-sm md:text-base leading-relaxed space-y-4 border-l-2 border-blood/30 pl-4">
+                <p>They thought the system was compromised. They thought 30 days of grinding was the end. But the cave changes you. <span class="text-white font-bold">140+ LeetCode problems</span> fractured. <span class="text-white font-bold">450+ commits</span> forged in the fires of isolation.</p>
+                <p>I don't just write code anymore. I orchestrate vengeance against bugs. Every repository is a battlefield. Every deployment is a strike.</p>
+                <p class="text-blood uppercase tracking-widest text-xs pt-2">I am the Full-Stack resolution.</p>
+            </div>
+
+            <div class="mt-12 flex flex-wrap gap-6 text-sm tracking-[0.2em]">
+                <a href="#missions" class="px-6 py-3 bg-blood text-white font-bold hover:bg-red-700 transition-colors uppercase border border-blood text-center">
+                    View Dossier
+                </a>
+                <a href="https://github.com/yansh07" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-blood/50 text-blood hover:bg-blood/10 transition-colors uppercase flex items-center justify-center gap-2">
+                    Access GitHub [Terminal]
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+            <span class="text-[10px] tracking-widest text-blood uppercase">Scroll Down</span>
+            <div class="w-px h-16 bg-gradient-to-b from-blood to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Training Data (Stats) -->
+    <section id="training" class="py-24 px-4 relative z-10 pt-32 mt-12 bg-black/60 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-2xl md:text-4xl text-white tracking-widest uppercase mb-12 flex items-center gap-4">
+                <span class="text-blood">//</span> Training Data
+                <span class="h-px bg-blood/30 flex-grow"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Data Point 1 -->
+                <div class="tactical-border p-8 hover:-translate-y-2 transition-transform">
+                    <div class="text-blood text-sm tracking-widest mb-4">DATA::ALGORITHMS</div>
+                    <div class="text-6xl font-display font-bold text-white mb-2 bat-glow">140+</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Leetcode Constructs Solved (Med/Hard Focus)</div>
+                    <div class="mt-4 w-full bg-black h-1">
+                        <div class="bg-blood h-full w-[85%]"></div>
+                    </div>
+                </div>
+
+                <!-- Data Point 2 -->
+                <div class="tactical-border p-8 hover:-translate-y-2 transition-transform">
+                    <div class="text-blood text-sm tracking-widest mb-4">DATA::COMMITS</div>
+                    <div class="text-6xl font-display font-bold text-white mb-2 bat-glow">450+</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Repository Impacts Detected</div>
+                    <div class="mt-4 w-full bg-black h-1">
+                        <div class="bg-blood h-full w-[92%]"></div>
+                    </div>
+                </div>
+
+                <!-- Data Point 3 -->
+                <div class="tactical-border p-8 hover:-translate-y-2 transition-transform">
+                    <div class="text-blood text-sm tracking-widest mb-4">DATA::APPLICATIONS</div>
+                    <div class="text-6xl font-display font-bold text-white mb-2 bat-glow">3</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wider">Active Production Systems</div>
+                    <div class="mt-4 w-full bg-black h-1">
+                        <div class="bg-blood h-full w-[100%] animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Missions (Projects) -->
+    <section id="missions" class="py-24 px-4 relative z-10 pt-32">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-2xl md:text-4xl text-white tracking-widest uppercase mb-12 flex items-center gap-4">
+                <span class="text-blood">//</span> Active Missions
+                <span class="h-px bg-blood/30 flex-grow"></span>
+            </h2>
+
+            <div class="space-y-8">
+                <!-- Mission 1 -->
+                <div class="tactical-border p-0 flex flex-col md:flex-row group transition-all duration-300">
+                    <div class="md:w-1/3 bg-black/50 p-8 border-b md:border-b-0 md:border-r border-blood/20 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-blood/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                        <div class="text-blood text-xs tracking-widest mb-2 uppercase relative z-10">Subject: File Encryption</div>
+                        <h3 class="font-display text-2xl md:text-3xl text-white uppercase tracking-wider mb-4 group-hover:text-blood transition-colors relative z-10">Oversight</h3>
+                        <div class="flex gap-2 flex-wrap relative z-10">
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">Go</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">Steganography</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-white/20 px-2 py-1">Redis</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                        <p class="text-sm leading-relaxed text-gray-400 mb-6">
+                            Zero-knowledge ephemeral sharing protocol. Designed to embed encrypted payloads directly within PNG imagery using 1-bit LSB differential packing. Bypasses Deep Packet Inspection completely. The server sees nothing. Pure invisibility.
+                        </p>
+                        <div class="flex flex-wrap gap-4 uppercase text-xs tracking-widest">
+                            <a href="https://github.com/yansh07/oversight" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Source_Code]
+                            </a>
+                            <span class="text-blood hidden sm:inline">|</span>
+                            <a href="https://oversight-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Execute_Live]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 2 -->
+                <div class="tactical-border p-0 flex flex-col md:flex-row group transition-all duration-300">
+                    <div class="md:w-1/3 bg-black/50 p-8 border-b md:border-b-0 md:border-r border-blood/20 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-blood/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                        <div class="text-blood text-xs tracking-widest mb-2 uppercase relative z-10">Subject: Resource tracking</div>
+                        <h3 class="font-display text-2xl md:text-3xl text-white uppercase tracking-wider mb-4 group-hover:text-blood transition-colors relative z-10">Ledgerly</h3>
+                        <div class="flex gap-2 flex-wrap relative z-10">
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">FastAPI</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">PostgreSQL</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-white/20 px-2 py-1">React</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                        <p class="text-sm leading-relaxed text-gray-400 mb-6">
+                            Full-stack dashboard for complete resource domination. Features OAuth 2.0 authorization, async threshold alerts via Background Tasks and Resend API, and relentless 429 rate-limiting. Deployed in dockerized isolation on Railway.
+                        </p>
+                        <div class="flex flex-wrap gap-4 uppercase text-xs tracking-widest">
+                            <a href="https://github.com/yansh07/Ledgerly" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Source_Code]
+                            </a>
+                            <span class="text-blood hidden sm:inline">|</span>
+                            <a href="https://ledgerly-sandy.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Execute_Live]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 3 -->
+                <div class="tactical-border p-0 flex flex-col md:flex-row group transition-all duration-300">
+                    <div class="md:w-1/3 bg-black/50 p-8 border-b md:border-b-0 md:border-r border-blood/20 flex flex-col justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-blood/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+                        <div class="text-blood text-xs tracking-widest mb-2 uppercase relative z-10">Subject: Network Surveillance</div>
+                        <h3 class="font-display text-2xl md:text-3xl text-white uppercase tracking-wider mb-4 group-hover:text-blood transition-colors relative z-10">Gophar</h3>
+                        <div class="flex gap-2 flex-wrap relative z-10">
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">Golang</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-blood/50 bg-blood/10 px-2 py-1 text-white">Goroutines</span>
+                            <span class="text-[10px] uppercase tracking-wider border border-white/20 px-2 py-1">Telegram API</span>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                        <p class="text-sm leading-relaxed text-gray-400 mb-6">
+                            24/7 uptime surveillance matrix. Leveraging Goroutines for concurrent health checks across all registered targets. If a system bleeds, I know about it instantly through Telegram integration. State-managed to prevent notification spam.
+                        </p>
+                        <div class="flex flex-wrap gap-4 uppercase text-xs tracking-widest">
+                            <a href="https://github.com/yansh07/gophar" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Source_Code]
+                            </a>
+                            <span class="text-blood hidden sm:inline">|</span>
+                            <a href="https://gophar.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors flex items-center gap-1 border-b border-transparent hover:border-blood pb-1">
+                                [Execute_Live]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Arsenal (Skills) -->
+    <section id="arsenal" class="py-24 px-4 relative z-10 pt-32 bg-black/40">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-2xl md:text-4xl text-white tracking-widest uppercase mb-12 flex items-center gap-4">
+                <span class="text-blood">//</span> The Arsenal
+                <span class="h-px bg-blood/30 flex-grow"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Software Weapons -->
+                <div class="space-y-6">
+                    <div class="border border-blood/20 p-6 bg-black/80 relative group overflow-hidden tactical-border">
+                        <h4 class="text-blood text-sm uppercase mb-4 font-bold tracking-widest">>> Core Languages</h4>
+                        <div class="flex flex-wrap gap-3 text-sm uppercase">
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">Go (Golang)</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">TypeScript</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">Python</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="border border-blood/20 p-6 bg-black/80 relative group overflow-hidden tactical-border">
+                        <h4 class="text-blood text-sm uppercase mb-4 font-bold tracking-widest">>> Sub-Systems (Backend)</h4>
+                        <div class="flex flex-wrap gap-3 text-sm uppercase">
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">FastAPI</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">Gin</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">Node.js</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">Express.js</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-blood hover:text-black transition-colors cursor-default">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tactical Gear -->
+                <div class="space-y-6">
+                    <div class="border border-blood/20 p-6 bg-black/80 relative group overflow-hidden tactical-border">
+                        <h4 class="text-blood text-sm uppercase mb-4 font-bold tracking-widest">>> Data & Infrastructure</h4>
+                        <div class="flex flex-wrap gap-3 text-sm uppercase">
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">PostgreSQL</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">MongoDB</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">Redis</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="border border-blood/20 p-6 bg-black/80 relative group overflow-hidden tactical-border">
+                        <h4 class="text-blood text-sm uppercase mb-4 font-bold tracking-widest">>> Interface Tactics & Tools</h4>
+                        <div class="flex flex-wrap gap-3 text-sm uppercase">
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">React.js</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">Tailwind CSS</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">Git / GitHub</span>
+                            <span class="bg-blood/10 border border-blood/30 px-3 py-1 text-white hover:bg-white hover:text-black transition-colors cursor-default">Postman</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 border-l-2 border-blood bg-blood/5 text-xs uppercase tracking-widest text-gray-400 font-bold">
+                        "The tool doesn't make the developer. The developer weaponizes the tool."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Bat Signal (Contact) -->
+    <section id="signal" class="py-32 px-4 relative z-10 mt-12 bg-gradient-to-t from-black via-black/50 to-transparent">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="w-24 h-24 mx-auto mb-10 relative cursor-pointer group">
+                <div class="absolute inset-0 bg-blood rounded-full animate-ping blur-xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
+                <div class="w-full h-full border-4 border-blood rounded-full flex items-center justify-center relative z-10 bg-black group-hover:bg-blood transition-colors duration-500">
+                    <span class="text-blood font-display font-bold text-3xl group-hover:text-black transition-colors">P_</span>
+                </div>
+            </div>
+
+            <h2 class="font-display text-3xl md:text-5xl text-white tracking-widest uppercase mb-6 bat-glow glitch-hover">
+                <span class="glitch-text" data-text="LIGHT THE SIGNAL">LIGHT THE SIGNAL</span>
+            </h2>
+            
+            <p class="text-gray-400 uppercase tracking-widest text-xs md:text-sm mb-12 max-w-xl mx-auto border-y border-white/10 py-6 leading-relaxed">
+                The web is full of vulnerabilities. Bad code hides in the dark. Send the coordinates to deploy the comeback protocol. Let's build something indestructible.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center uppercase tracking-widest text-sm font-bold">
+                <a href="mailto:pksingh69313@gmail.com" class="px-8 py-4 bg-blood text-white hover:bg-red-800 transition-all border border-blood relative overflow-hidden group shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]">
+                    <span class="relative z-10">[ INITIATE_COMMS_LINK ]</span>
+                </a>
+                <a href="https://linkedin.com/in/yansh08" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border border-white/20 bg-black/50 text-white hover:border-blood hover:text-blood transition-all">
+                    [ ESTABLISH_NETWORK ]
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-blood/20 bg-[#050505] text-center py-10 relative z-10 mt-12">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest text-gray-600 uppercase">
+            <div class="mb-4 md:mb-0">&copy; 2026. COMEBACK_PROTOCOL. V1.0</div>
+            <div class="mb-4 md:mb-0 text-blood font-bold tracking-[0.3em] flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-blood animate-ping rounded-full"></div>
+                SYSTEM SECURE AND WATCHING
+            </div>
+            <div class="flex gap-6">
+                <a href="https://github.com/yansh07" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors pb-1 border-b border-transparent hover:border-blood">GITHUB</a>
+                <a href="https://linkedin.com/in/yansh08" target="_blank" rel="noopener noreferrer" class="hover:text-blood transition-colors pb-1 border-b border-transparent hover:border-blood">LINKEDIN</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
